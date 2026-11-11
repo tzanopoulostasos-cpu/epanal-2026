@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://typologia.netlify.app/epanaliptika?year=2026 -->
+<html lang="el"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=ee30d504-e5f4-4d22-b64b-30b950418908
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. --><meta name="viewport" content="width=device-width,initial-scale=1"><title>Φυσική · Επαναληπτικά 2026 · με λύση</title><style>
+* {box-sizing:border-box}
+body {margin:0;background:#f7f6f1;color:#162e43;font:16px/1.6 'Segoe UI',Arial,sans-serif}
+main,footer {max-width:760px;margin:auto;padding:0 22px}
+header {padding:48px 0 26px;border-bottom:2px solid #17394d}
+header p,footer {font-size:.88rem}
+header p {margin:0;color:#325769;font-weight:650}
+h1 {margin:.35em 0 0;font:600 clamp(1.9rem,5vw,3rem)/1.15 Georgia,serif}
+section {padding:26px 0;border-bottom:1px solid #bcc8c7}
+h2 {margin:0;font-size:1.55rem;line-height:1.25}
+section p {color:#475b66;margin:8px 0 18px}
+nav {display:flex;gap:10px;flex-wrap:wrap}
+a {display:inline-block;padding:9px 18px;border:1px solid #20525b;border-radius:6px;color:#17444a;background:#fff;text-decoration:none;font-weight:650}
+a:first-child {background:#20525b;color:white} a:hover {text-decoration:underline} a:focus-visible {outline:3px solid #cb702c;outline-offset:3px}
+footer {padding-top:22px;padding-bottom:30px;color:#526473}
+
+#screen-pan-exam { overflow:hidden; padding-bottom:0; min-height:0; }
+#pan-content { min-height:0; overscroll-behavior:contain; }
+.pan-heading { padding:8px 0 15px; text-align:center; }
+.pan-heading p { color:#64748b; font-size:.9rem; }
+.pan-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:5px; margin:0 0 16px; }
+.pan-nav button { border:1px solid #bfdbfe; background:#eff6ff; color:#1e3a8a; padding:9px 3px; border-radius:10px; font-weight:700; cursor:pointer; }
+.pan-section { color:#1e3a8a; padding:12px 0; font-size:1.05rem; scroll-margin-top:8px; }
+.pan-card { text-align:left; }
+.pan-card .question-text, .pan-context, .pan-given, .pan-subquestion { line-height:1.7; font-size:.96rem; overflow-wrap:break-word; }
+.pan-card p, .pan-context p { margin:10px 0; }
+.pan-card .question-header-top { flex-wrap:wrap; gap:8px; }
+.pan-figure { margin:12px auto; padding:6px; background:#fff; text-align:center; }
+.pan-figure svg { width:100%; max-width:340px; max-height:460px; height:auto; display:block; margin:auto; }
+.pan-tf { display:grid; grid-template-columns:1fr 1fr; }
+.pan-tf .option-btn { padding:10px; }
+.pan-context { margin:8px 0 14px; padding:14px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; }
+.pan-given { background:#f8fafc; border-left:3px solid #94a3b8; padding:12px; margin:12px 0; font-size:.88rem; }
+.pan-subquestion { margin:18px 0; }
+.pan-points { display:block; color:#64748b; text-align:right; font-size:.8rem; font-weight:600; }
+.pan-task { font-size:.88rem; line-height:1.6; color:#475569; }
+.pan-written { margin-top:16px; border-top:1px dashed #cbd5e1; padding-top:12px; }
+.pan-written > label:first-child { font-size:.85rem; font-weight:600; display:block; margin-bottom:6px; }
+.pan-written textarea { width:100%; resize:vertical; min-height:76px; border:1px solid #cbd5e1; border-radius:10px; padding:10px; font:inherit; font-size:.9rem; }
+.pan-upload { display:flex; justify-content:center; padding:11px; margin-top:10px; background:#eff6ff; color:#1e3a8a; border:1px dashed #93c5fd; border-radius:10px; font-size:.88rem; font-weight:700; cursor:pointer; }
+.pan-photos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
+.pan-photo { border:1px solid #e2e8f0; padding:5px; border-radius:10px; }
+.pan-photo img { width:100%; max-height:130px; object-fit:contain; }
+.pan-photo button { display:block; width:100%; border:0; color:#b91c1c; background:#fff; padding:5px; cursor:pointer; }
+.pan-fields { display:grid; gap:10px; margin:14px 0; }
+.pan-field { display:flex; flex-direction:column; gap:6px; font-size:.9rem; }
+.pan-field input { width:100%; border:1px solid #cbd5e1; border-radius:10px; padding:11px; font:inherit; background:#fff; }
+.pan-field-feedback { font-size:.82rem; min-height:1em; }
+.pan-check { width:100%; justify-content:center; margin:8px 0; }
+.pan-feedback { margin:12px 0; font-size:.9rem; line-height:1.5; }
+.pan-feedback:empty { display:none; }
+.pan-feedback-good,.pan-good { color:#047857; }
+.pan-feedback-wrong,.pan-wrong { color:#b91c1c; }
+.pan-feedback-pending { color:#92400e; }
+.pan-solution-toggle { width:100%; margin-top:8px; padding:10px; border:1px solid #a7f3d0; border-radius:10px; color:#047857; background:#ecfdf5; font:inherit; font-size:.9rem; font-weight:600; cursor:pointer; }
+.pan-solution { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:14px; margin-top:12px; line-height:1.7; font-size:.94rem; overflow-x:auto; }
+.pan-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-shrink:0; padding:12px 5px; border-top:1px solid #e2e8f0; background:#fff; }
+.pan-footer [hidden], .pan-footer[hidden], .pan-solution[hidden] { display:none !important; }
+#pan-progress { font-size:.76rem; color:#475569; font-weight:600; line-height:1.4; }
+#pan-submit { font-size:.92rem; padding:11px 14px; }
+.pan-submit-status { font-size:.83rem; color:#b45309; line-height:1.45; flex-shrink:0; }
+.pan-submit-status:empty { display:none; }
+.pan-result-note { font-size:.95rem; line-height:1.6; margin:18px 0; }
+#screen-pan-exam button:focus-visible,#screen-pan-exam input:focus-visible,#screen-pan-exam textarea:focus-visible { outline:3px solid #60a5fa; outline-offset:2px; }
+#screen-pan-exam button:disabled { opacity:.6; cursor:wait; }
+@media(max-width:360px) { .pan-card { padding:14px; } .pan-nav button { font-size:.76rem; } #pan-progress { font-size:.7rem; } }
+
+.pan-card .option-btn > span:last-child { min-width:0; flex:1; }
+.pan-card .option-btn svg { display:block; width:100%; max-width:300px; height:auto; }
+.pan-figure-zoom { margin-top:8px; text-align:left; }
+.pan-figure-zoom summary { cursor:pointer; color:#1e3a8a; font-size:.8rem; font-weight:600; }
+.pan-figure-zoom > div { overflow:auto; max-height:65vh; margin-top:10px; border:1px solid #e2e8f0; background:#fff; }
+.pan-figure-zoom > div svg { width:740px; max-width:none; max-height:none; margin:0; }
+body{background:#f4f6f9}main{max-width:880px}button,input,textarea{font:inherit}button{cursor:pointer}.options-container{display:grid;gap:7px}.option-btn{display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:10px;text-align:left;color:inherit}.option-prefix{font-weight:700;color:#17495c}.correct{background:#dcfce7;border-color:#15803d}.wrong{background:#fee2e2;border-color:#b91c1c}.question-card{background:white;border:1px solid #d4dee7;margin:12px 0;padding:clamp(12px,3vw,24px);border-radius:14px}.question-header-top{display:flex;justify-content:space-between;font-weight:700}.question-source{color:#526473;font-size:.85em}.pan-hint-toggle,.pan-hint{background:#fffbeb;color:#75440b;border:1px solid #fde68a}.pan-hint{margin:8px 0;padding:12px;border-radius:10px}.pan-check,.syllabus-back-btn{padding:10px 16px;background:#20525b;color:white;border:0;border-radius:8px}.pan-practice-written{display:block}.pan-practice-written textarea{width:100%}.pan-card{overflow-x:auto}.pan-card svg{max-width:100%}.pan-heading h2{font-family:Georgia,serif}.pan-field input{min-width:0}.pan-solution{overflow:auto}.home{margin:18px 0}math{font-family:math} [hidden]{display:none!important}
+#reading-width{display:none}
+@media (min-width:1100px) and (orientation:landscape){
+  main{max-width:760px;padding:0}
+  main.reading-wide{width:min(900px,calc(100vw - 180px));max-width:none}
+  #reading-width{display:inline-block;float:right;margin:18px 0;padding:9px 14px;border:1px solid #20525b;border-radius:6px;color:#17444a;background:white}
+  .reading-wide .question-card{padding:20px 24px}
+}</style><meta name="maxai-mui-classname-prefix" content="injectDocumentStart-2026-11-11T16:54:14.440Z"><script src="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/apps/content-scripts/website/maxai.js"></script><style id="pan-option-feedback-css">.pan-option-feedback{margin-top:8px;padding:10px 12px;border-radius:10px;line-height:1.6;color:#1e293b;font-size:.92rem;}.pan-option-feedback-good{background:#ecfdf5;border:1px solid #a7f3d0;}.pan-option-feedback-wrong{background:#fef2f2;border:1px solid #fecaca;}</style><style>.kk-row{margin:8px 0 6px 0;}.kk-link{display:inline-flex;align-items:center;gap:8px;max-width:100%;text-align:left;background:#fff;border:1.5px solid #c4b5fd;border-radius:999px;padding:3px 12px 3px 3px;cursor:pointer;font:inherit;font-size:0.9rem;line-height:1.3;color:#5b21b6;box-shadow:0 1px 4px rgba(76,29,149,0.15);transition:transform .15s,background-color .15s;}.kk-link:hover{background:#faf5ff;transform:translateY(-1px);}.kk-link .kk-tag{flex-shrink:0;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-weight:800;font-size:0.76rem;border-radius:999px;padding:4px 10px;white-space:nowrap;}.kk-link .kk-txt{text-decoration:underline;text-underline-offset:3px;font-weight:600;}.kk-link.kk-D{border-color:#f9a8d4;color:#9d174d;box-shadow:0 1px 4px rgba(157,23,77,0.15);}.kk-link.kk-D:hover{background:#fdf2f8;}.kk-link.kk-D .kk-tag{background:linear-gradient(135deg,#db2777,#f472b6);}.kk-link.kk-B{border-color:#fcd34d;color:#92400e;box-shadow:0 1px 4px rgba(180,83,9,0.18);}.kk-link.kk-B:hover{background:#fffbeb;}.kk-link.kk-B .kk-tag{background:linear-gradient(135deg,#d97706,#f59e0b);}</style><style id="_goober"> .go1475592160{height:0;}.go1671063245{height:auto;}.go1888806478{display:flex;flex-wrap:wrap;flex-grow:1;}@media (min-width:600px){.go1888806478{flex-grow:initial;min-width:288px;}}.go167266335{background-color:#313131;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#fff;align-items:center;padding:6px 16px;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.go3162094071{padding-left:20px;}.go3844575157{background-color:#313131;}.go1725278324{background-color:#43a047;}.go3651055292{background-color:#d32f2f;}.go4215275574{background-color:#ff9800;}.go1930647212{background-color:#2196f3;}.go946087465{display:flex;align-items:center;padding:8px 0;}.go703367398{display:flex;align-items:center;margin-left:auto;padding-left:16px;margin-right:-8px;}.go3963613292{width:100%;position:relative;transform:translateX(0);top:0;right:0;bottom:0;left:0;min-width:288px;}.go1141946668{box-sizing:border-box;display:flex;max-height:100%;position:fixed;z-index:1400;height:auto;width:auto;transition:top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,max-width 300ms ease 0ms;pointer-events:none;max-width:calc(100% - 40px);}.go1141946668 .notistack-CollapseWrapper{padding:6px 0px;transition:padding 300ms ease 0ms;}@media (max-width:599.95px){.go1141946668{width:100%;max-width:calc(100% - 32px);}}.go3868796639 .notistack-CollapseWrapper{padding:2px 0px;}.go3118922589{top:14px;flex-direction:column;}.go1453831412{bottom:14px;flex-direction:column-reverse;}.go4027089540{left:20px;}@media (min-width:600px){.go4027089540{align-items:flex-start;}}@media (max-width:599.95px){.go4027089540{left:16px;}}.go2989568495{right:20px;}@media (min-width:600px){.go2989568495{align-items:flex-end;}}@media (max-width:599.95px){.go2989568495{right:16px;}}.go4034260886{left:50%;transform:translateX(-50%);}@media (min-width:600px){.go4034260886{align-items:center;}}</style><style type="text/css">.transform-component-module_wrapper__SPB86 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+.transform-component-module_content__FBWxo {
+  display: flex;
+  flex-wrap: wrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform-origin: 0% 0%;
+}
+.transform-component-module_content__FBWxo img {
+  pointer-events: none;
+}
+</style><link id="USE_CHAT_GPT_AI_CONTENT_CSS_LINK_TAG" rel="stylesheet" href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/content.css"><link rel="stylesheet" href="./Φυσική · Επαναληπτικά 2026 · με λύση_files/css2"></head><body><main class="reading-wide"><button id="reading-width" type="button" aria-pressed="true">Επαναφορά πλάτους</button><a class="home" href="https://typologia.netlify.app/#epanaliptika">← Αρχική</a><div id="screen-pan-exam" class="screen">
+                <div class="quiz-scroll-container" id="pan-content"><div class="pan-heading"><h2 class="screen-title">Φυσική · Επαναληπτικά 2026</h2><p>Με λύση και ανατροφοδότηση</p></div><nav class="pan-nav" aria-label="Μετάβαση σε θέμα"><button type="button" data-pan-action="jump" data-q="A">Θέμα Α</button><button type="button" data-pan-action="jump" data-q="B">Θέμα Β</button><button type="button" data-pan-action="jump" data-q="G">Θέμα Γ</button><button type="button" data-pan-action="jump" data-q="D">Θέμα Δ</button></nav><h3 class="pan-section" id="pan-section-A">Θέμα Α · 25 μονάδες</h3><article class="question-card pan-card" id="pan-card-A1"><div class="question-header-top"><span class="question-number">Α1</span><span class="question-source">5 μονάδες</span></div><div class="question-text">Η μονάδα ροπής δύναμης στο SI είναι:</div><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="A1" data-option="0" aria-pressed="false"><span class="option-prefix">α</span><span>kg·m</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A1" data-option="1" aria-pressed="false"><span class="option-prefix">β</span><span>N·m</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A1" data-option="2" aria-pressed="false"><span class="option-prefix">γ</span><span>N/m</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A1" data-option="3" aria-pressed="false"><span class="option-prefix">δ</span><span>kg·m/s²</span></button></div><div class="pan-feedback" id="pan-feedback-A1" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A1" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A1" hidden="">Πολλαπλασίασε τη μονάδα δύναμης με τη μονάδα του κάθετου βραχίονα.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A1" aria-expanded="false" aria-controls="pan-solution-A1">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A1" hidden=""><p>Ροπή = δύναμη × κάθετος βραχίονας, επομένως η μονάδα είναι N·m.</p></div></article><article class="question-card pan-card" id="pan-card-A2"><div class="question-header-top"><span class="question-number">Α2</span><span class="question-source">5 μονάδες</span></div><div class="question-text">Σε κύκλωμα εναλλασσόμενου ρεύματος με ωμικό αντιστάτη, η ενεργός ένταση είναι:</div><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="A2" data-option="0" aria-pressed="false"><span class="option-prefix">α</span><span>αντιστρόφως ανάλογη της ενεργού τάσης.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A2" data-option="1" aria-pressed="false"><span class="option-prefix">β</span><span>ανάλογη της ενεργού τάσης.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A2" data-option="2" aria-pressed="false"><span class="option-prefix">γ</span><span>ίση με τη μέση τιμή της έντασης.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A2" data-option="3" aria-pressed="false"><span class="option-prefix">δ</span><span>ίση με τη μέγιστη τιμή της έντασης.</span></button></div><div class="pan-feedback" id="pan-feedback-A2" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A2" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A2" hidden="">Εφάρμοσε τον νόμο του Ohm στις ενεργές τιμές τάσης και έντασης.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A2" aria-expanded="false" aria-controls="pan-solution-A2">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A2" hidden=""><p>Για σταθερή ωμική αντίσταση <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi mathvariant="normal">ε</mi><mi mathvariant="normal">ν</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi mathvariant="normal">ε</mi><mi mathvariant="normal">ν</mi></mrow></msub><mi>/</mi><mi>R</mi></mrow></semantics></math>.</p></div></article><article class="question-card pan-card" id="pan-card-A3"><div class="question-header-top"><span class="question-number">Α3</span><span class="question-source">5 μονάδες</span></div><div class="question-text">Η μαγνητική ροή αυξάνεται με σταθερό ρυθμό. Η ΗΕΔ επαγωγής:</div><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="A3" data-option="0" aria-pressed="false"><span class="option-prefix">α</span><span>αυξάνεται.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A3" data-option="1" aria-pressed="false"><span class="option-prefix">β</span><span>πρώτα αυξάνεται και μετά μειώνεται.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A3" data-option="2" aria-pressed="false"><span class="option-prefix">γ</span><span>μειώνεται.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A3" data-option="3" aria-pressed="false"><span class="option-prefix">δ</span><span>παραμένει σταθερή.</span></button></div><div class="pan-feedback" id="pan-feedback-A3" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A3" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A3" hidden="">Σκέψου τι μετρά η κλίση μιας γραφικής παράστασης ροής–χρόνου.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A3" aria-expanded="false" aria-controls="pan-solution-A3">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A3" hidden=""><p>Από Faraday <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℰ</mi><mo>=</mo><mi>−</mi><mi>d</mi><mi>Φ</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow></semantics></math>. Σταθερός ρυθμός μεταβολής ροής δίνει σταθερή ΗΕΔ.</p></div></article><article class="question-card pan-card" id="pan-card-A4"><div class="question-header-top"><span class="question-number">Α4</span><span class="question-source">5 μονάδες</span></div><div class="question-text">Σε εξαναγκασμένη μηχανική ταλάντωση με μη μηδενική απόσβεση, η συχνότητα ταλάντωσης:</div><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="A4" data-option="0" aria-pressed="false"><span class="option-prefix">α</span><span>ισούται με την ιδιοσυχνότητα.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A4" data-option="1" aria-pressed="false"><span class="option-prefix">β</span><span>ισούται με τη συχνότητα του διεγέρτη.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A4" data-option="2" aria-pressed="false"><span class="option-prefix">γ</span><span>εξαρτάται από το μέγεθος της δύναμης του διεγέρτη.</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A4" data-option="3" aria-pressed="false"><span class="option-prefix">δ</span><span>εξαρτάται από τη σταθερά b.</span></button></div><div class="pan-feedback" id="pan-feedback-A4" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A4" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A4" hidden="">Ξεχώρισε την ιδιοσυχνότητα του συστήματος από τη συχνότητα της περιοδικής δύναμης.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A4" aria-expanded="false" aria-controls="pan-solution-A4">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A4" hidden=""><p>Στη μόνιμη εξαναγκασμένη ταλάντωση η συχνότητα επιβάλλεται από τον διεγέρτη.</p></div></article><article class="question-card pan-card" id="pan-card-A5α"><div class="question-header-top"><span class="question-number">Α5α</span><span class="question-source">1 μονάδα</span></div><div class="question-text">Κατά de Broglie κάθε κινούμενο σωματίδιο έχει μήκος κύματος αντιστρόφως ανάλογο της ορμής του.</div><div class="options-container pan-tf"><button type="button" class="option-btn" data-pan-action="choose" data-q="A5α" data-option="0" aria-pressed="false"><span class="option-prefix">Σ</span><span>Σωστό</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A5α" data-option="1" aria-pressed="false"><span class="option-prefix">Λ</span><span>Λάθος</span></button></div><div class="pan-feedback" id="pan-feedback-A5α" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A5α" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A5α" hidden="">Γράψε τη σχέση de Broglie και εξέτασε τι συμβαίνει όταν διπλασιάζεται η ορμή.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A5α" aria-expanded="false" aria-controls="pan-solution-A5α">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A5α" hidden=""><p>Σωστό. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>h</mi><mi>/</mi><mi>p</mi></mrow></semantics></math>.</p></div></article><article class="question-card pan-card" id="pan-card-A5β"><div class="question-header-top"><span class="question-number">Α5β</span><span class="question-source">1 μονάδα</span></div><div class="question-text">Ζεύγος δυνάμεων σε αρχικά ακίνητο στερεό προκαλεί σύνθετη κίνηση.</div><div class="options-container pan-tf"><button type="button" class="option-btn" data-pan-action="choose" data-q="A5β" data-option="0" aria-pressed="false"><span class="option-prefix">Σ</span><span>Σωστό</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A5β" data-option="1" aria-pressed="false"><span class="option-prefix">Λ</span><span>Λάθος</span></button></div><div class="pan-feedback" id="pan-feedback-A5β" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A5β" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A5β" hidden="">Σχεδίασε τις δύο δυνάμεις του ζεύγους και βρες τη συνισταμένη τους.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A5β" aria-expanded="false" aria-controls="pan-solution-A5β">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A5β" hidden=""><p>Λάθος. Η συνισταμένη είναι μηδενική, άρα δεν επιταχύνεται το κέντρο μάζας. Το στερεό αποκτά περιστροφική κίνηση.</p></div></article><article class="question-card pan-card" id="pan-card-A5γ"><div class="question-header-top"><span class="question-number">Α5γ</span><span class="question-source">1 μονάδα</span></div><div class="question-text">Η απόσταση διαδοχικών κοιλιών στάσιμου κύματος είναι λ/2.</div><div class="options-container pan-tf"><button type="button" class="option-btn" data-pan-action="choose" data-q="A5γ" data-option="0" aria-pressed="false"><span class="option-prefix">Σ</span><span>Σωστό</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A5γ" data-option="1" aria-pressed="false"><span class="option-prefix">Λ</span><span>Λάθος</span></button></div><div class="pan-feedback" id="pan-feedback-A5γ" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A5γ" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A5γ" hidden="">Σημείωσε πάνω σε ένα μήκος κύματος τις θέσεις των κοιλιών.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A5γ" aria-expanded="false" aria-controls="pan-solution-A5γ">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A5γ" hidden=""><p>Σωστό. Κοιλίες και δεσμοί εναλλάσσονται ανά λ/4.</p></div></article><article class="question-card pan-card" id="pan-card-A5δ"><div class="question-header-top"><span class="question-number">Α5δ</span><span class="question-source">1 μονάδα</span></div><div class="question-text">Στην πλαστική κρούση μεταβάλλεται η μηχανική ενέργεια του συστήματος.</div><div class="options-container pan-tf"><button type="button" class="option-btn" data-pan-action="choose" data-q="A5δ" data-option="0" aria-pressed="false"><span class="option-prefix">Σ</span><span>Σωστό</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A5δ" data-option="1" aria-pressed="false"><span class="option-prefix">Λ</span><span>Λάθος</span></button></div><div class="pan-feedback" id="pan-feedback-A5δ" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A5δ" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A5δ" hidden="">Σύγκρινε την κινητική ενέργεια πριν και μετά τη δημιουργία του συσσωματώματος.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A5δ" aria-expanded="false" aria-controls="pan-solution-A5δ">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A5δ" hidden=""><p>Σωστό. Μέρος της αρχικής κινητικής ενέργειας μετατρέπεται σε εσωτερική ενέργεια.</p></div></article><article class="question-card pan-card" id="pan-card-A5ε"><div class="question-header-top"><span class="question-number">Α5ε</span><span class="question-source">1 μονάδα</span></div><div class="question-text">Το πεδίο στο εσωτερικό σωληνοειδούς μεγάλου μήκους είναι ανομοιογενές.</div><div class="options-container pan-tf"><button type="button" class="option-btn" data-pan-action="choose" data-q="A5ε" data-option="0" aria-pressed="false"><span class="option-prefix">Σ</span><span>Σωστό</span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="A5ε" data-option="1" aria-pressed="false"><span class="option-prefix">Λ</span><span>Λάθος</span></button></div><div class="pan-feedback" id="pan-feedback-A5ε" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="A5ε" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-A5ε" hidden="">Σχεδίασε τις δυναμικές γραμμές στο κέντρο ενός σωληνοειδούς μεγάλου μήκους.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="A5ε" aria-expanded="false" aria-controls="pan-solution-A5ε">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-A5ε" hidden=""><p>Λάθος. Μακριά από τα άκρα του θεωρείται ομογενές.</p></div></article><h3 class="pan-section" id="pan-section-B">Θέμα Β · 25 μονάδες</h3><article class="question-card pan-card" id="pan-card-B1"><div class="question-header-top"><span class="question-number">Β1</span><span class="question-source">8 μονάδες</span></div><div class="question-text">Οι όμοιες και σύγχρονες πηγές Π₁ και Π₂ του σχήματος βρίσκονται πάνω στην ελεύθερη επιφάνεια υγρού που ηρεμεί και δημιουργούν εγκάρσια απλά αρμονικά κύματα. Οι πηγές ταλαντώνονται χωρίς αρχική φάση, με πλάτος <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi></semantics></math> και περίοδο <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi></semantics></math>, ενώ τα κύματα που δημιουργούνται διαδίδονται στην επιφάνεια του υγρού με ταχύτητα σταθερού μέτρου <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>υ</mi></semantics></math>, χωρίς απώλειες ενέργειας.<p>Ένα σημείο Σ της επιφάνειας του υγρού απέχει από τις πηγές Π₁, Π₂ αποστάσεις <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>1</mn></msub></semantics></math> και <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>2</mn></msub></semantics></math>, αντίστοιχα, με <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>r</mi><mn>2</mn></msub></mrow></semantics></math>. Αν τα δύο κύματα συμβάλουν στο σημείο Σ, με χρονική διαφορά <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><mn>5</mn><mi>T</mi></mrow><mn>2</mn></mfrac></semantics></math>, για το πλάτος <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>΄</mi></mrow></semantics></math> της ταλάντωσης του σημείου Σ, μετά την έναρξη της συμβολής, θα ισχύει ότι:</p></div><figure class="pan-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345 175" style="max-width:345px" role="img" aria-label="Τρίγωνο με κορυφές τις πηγές Π1, Π2 και το σημείο Σ· οι πλευρές ΣΠ1 = r1 και ΣΠ2 = r2"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><path d="M40 160L300 160L210 24Z" stroke="#334155" stroke-width="2.2" fill="none"></path><circle cx="40" cy="160" r="4.5" fill="#1e293b"></circle><circle cx="300" cy="160" r="4.5" fill="#1e293b"></circle><text x="34" y="150" text-anchor="end">Π<tspan dy="5" font-size="12">1</tspan><tspan dy="-5">​</tspan></text><text x="308" y="150" text-anchor="start">Π<tspan dy="5" font-size="12">2</tspan><tspan dy="-5">​</tspan></text><text x="216" y="18" text-anchor="start">Σ</text><text x="112" y="88" text-anchor="end">r<tspan dy="5" font-size="12">1</tspan><tspan dy="-5">​</tspan></text><text x="262" y="88" text-anchor="start">r<tspan dy="5" font-size="12">2</tspan><tspan dy="-5">​</tspan></text></g></svg><details class="pan-figure-zoom"><summary>Μεγέθυνση σχήματος</summary><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345 175" style="max-width:345px" role="img" aria-label="Τρίγωνο με κορυφές τις πηγές Π1, Π2 και το σημείο Σ· οι πλευρές ΣΠ1 = r1 και ΣΠ2 = r2"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><path d="M40 160L300 160L210 24Z" stroke="#334155" stroke-width="2.2" fill="none"></path><circle cx="40" cy="160" r="4.5" fill="#1e293b"></circle><circle cx="300" cy="160" r="4.5" fill="#1e293b"></circle><text x="34" y="150" text-anchor="end">Π<tspan dy="5" font-size="12">1</tspan><tspan dy="-5">​</tspan></text><text x="308" y="150" text-anchor="start">Π<tspan dy="5" font-size="12">2</tspan><tspan dy="-5">​</tspan></text><text x="216" y="18" text-anchor="start">Σ</text><text x="112" y="88" text-anchor="end">r<tspan dy="5" font-size="12">1</tspan><tspan dy="-5">​</tspan></text><text x="262" y="88" text-anchor="start">r<tspan dy="5" font-size="12">2</tspan><tspan dy="-5">​</tspan></text></g></svg></div></details></figure><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="B1" data-option="0" aria-pressed="false"><span class="option-prefix">i</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>′</mi><mo>=</mo><mn>2</mn><mi>A</mi></mrow></semantics></math></span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="B1" data-option="1" aria-pressed="false"><span class="option-prefix">ii</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>′</mi><mo>=</mo><mn>0</mn></mrow></semantics></math></span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="B1" data-option="2" aria-pressed="false"><span class="option-prefix">iii</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>A</mi><mi>′</mi><mo>&lt;</mo><mn>2</mn><mi>A</mi></mrow></semantics></math></span></button></div><p class="pan-task">α) Να επιλέξετε τη σωστή απάντηση (2 μονάδες).<br>β) Να δικαιολογήσετε την επιλογή σας (6 μονάδες).</p><div class="pan-feedback" id="pan-feedback-B1" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="B1" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-B1" hidden="">Μετέτρεψε την καθυστέρηση άφιξης σε διαφορά φάσης με τη γωνιακή συχνότητα.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="B1" aria-expanded="false" aria-controls="pan-solution-B1">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-B1" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-B" data-k="pan" data-c="r26-b1-interf"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">καθυστέρηση 5T/2 ⇒ Δφ = 5π ⇒ A′ = 0</span></button></div><p>Η διαφορά φάσης είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><mi>φ</mi><mo>=</mo><mi>ω</mi><mi>Δ</mi><mi>t</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>π</mi><mi>/</mi><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mi>T</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>5</mn><mi>π</mi></mrow></semantics></math>. Το πλάτος της συνισταμένης είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>′</mi><mo>=</mo><mn>2</mn><mi>A</mi><mrow><mo stretchy="true" form="prefix">|</mo><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>Δ</mi><mi>φ</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>2</mn><mi>A</mi><mrow><mo stretchy="true" form="prefix">|</mo><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mi>π</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><menclose notation="box"><mn>0</mn></menclose></mrow></semantics></math>. Έχουμε απόσβεση, επιλογή ii.</p></div></article><article class="question-card pan-card" id="pan-card-B2"><div class="question-header-top"><span class="question-number">Β2</span><span class="question-source">8 μονάδες</span></div><div class="question-text">Το εμπόδιο στο σχήμα έχει ύψος <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mfrac displaystyle="true"><mi>R</mi><mn>5</mn></mfrac></mrow></semantics></math> και ο τροχός έχει ακτίνα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi></semantics></math> και βάρος <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi></semantics></math>. Για ποιες τιμές της οριζόντιας δύναμης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi></semantics></math> ο τροχός θα υπερπηδήσει το εμπόδιο;<p><i>Το σχήμα δεν είναι υπό κλίμακα.</i></p></div><figure class="pan-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 186" style="max-width:320px" role="img" aria-label="Τροχός ακτίνας R και βάρους W ακουμπά σε εμπόδιο ύψους h στο σημείο Κ· η οριζόντια δύναμη F ασκείται στο ανώτατο σημείο του τροχού"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(0 16)"><path d="M10 125H133V114H250" stroke="#334155" stroke-width="2" fill="none"></path><path d="M16 125l-7 8M26 125l-7 8M36 125l-7 8M46 125l-7 8M56 125l-7 8M66 125l-7 8M76 125l-7 8M86 125l-7 8M96 125l-7 8M106 125l-7 8M116 125l-7 8M126 125l-7 8M142 114l-7 8M152 114l-7 8M162 114l-7 8M172 114l-7 8M182 114l-7 8M192 114l-7 8M202 114l-7 8M212 114l-7 8M222 114l-7 8M232 114l-7 8M242 114l-7 8" stroke="#334155" stroke-width="1.1" fill="none"></path><circle cx="100" cy="70" r="55" stroke="#334155" stroke-width="2" fill="none"></circle><circle cx="100" cy="70" r="3.5" fill="#1e293b"></circle><path d="M100 70L139 31" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="3 3"></path><text x="112" y="46" text-anchor="start">R</text><circle cx="100" cy="15" r="3" fill="#1e293b"></circle><path d="M100 15L200 15" stroke="#334155" stroke-width="2" fill="none"></path><path d="M210 15L199 19.6L199 10.4Z" fill="#334155" stroke="none"></path><text x="196" y="9" text-anchor="middle" font-size="17">F</text><path d="M190.7 -6.6L198.3 -6.6" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M202.3 -6.6L197.3 -4.5L197.3 -8.7Z" fill="#1e293b" stroke="none"></path><path d="M100 70L100 148" stroke="#334155" stroke-width="2" fill="none"></path><path d="M100 158L95.4 147L104.6 147Z" fill="#334155" stroke="none"></path><text x="110" y="158" text-anchor="start">W</text><text x="140" y="106" text-anchor="start">Κ</text><path d="M250 125L300 125" stroke="#334155" stroke-width="1" fill="none" stroke-dasharray="3 3"></path><path d="M282 96L282 107" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M282 113L279.1 106L284.9 106Z" fill="#334155" stroke="none"></path><path d="M282 143L282 132" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M282 126L284.9 133L279.1 133Z" fill="#334155" stroke="none"></path><text x="292" y="124" text-anchor="start">h</text></g></g></svg><details class="pan-figure-zoom"><summary>Μεγέθυνση σχήματος</summary><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 186" style="max-width:320px" role="img" aria-label="Τροχός ακτίνας R και βάρους W ακουμπά σε εμπόδιο ύψους h στο σημείο Κ· η οριζόντια δύναμη F ασκείται στο ανώτατο σημείο του τροχού"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(0 16)"><path d="M10 125H133V114H250" stroke="#334155" stroke-width="2" fill="none"></path><path d="M16 125l-7 8M26 125l-7 8M36 125l-7 8M46 125l-7 8M56 125l-7 8M66 125l-7 8M76 125l-7 8M86 125l-7 8M96 125l-7 8M106 125l-7 8M116 125l-7 8M126 125l-7 8M142 114l-7 8M152 114l-7 8M162 114l-7 8M172 114l-7 8M182 114l-7 8M192 114l-7 8M202 114l-7 8M212 114l-7 8M222 114l-7 8M232 114l-7 8M242 114l-7 8" stroke="#334155" stroke-width="1.1" fill="none"></path><circle cx="100" cy="70" r="55" stroke="#334155" stroke-width="2" fill="none"></circle><circle cx="100" cy="70" r="3.5" fill="#1e293b"></circle><path d="M100 70L139 31" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="3 3"></path><text x="112" y="46" text-anchor="start">R</text><circle cx="100" cy="15" r="3" fill="#1e293b"></circle><path d="M100 15L200 15" stroke="#334155" stroke-width="2" fill="none"></path><path d="M210 15L199 19.6L199 10.4Z" fill="#334155" stroke="none"></path><text x="196" y="9" text-anchor="middle" font-size="17">F</text><path d="M190.7 -6.6L198.3 -6.6" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M202.3 -6.6L197.3 -4.5L197.3 -8.7Z" fill="#1e293b" stroke="none"></path><path d="M100 70L100 148" stroke="#334155" stroke-width="2" fill="none"></path><path d="M100 158L95.4 147L104.6 147Z" fill="#334155" stroke="none"></path><text x="110" y="158" text-anchor="start">W</text><text x="140" y="106" text-anchor="start">Κ</text><path d="M250 125L300 125" stroke="#334155" stroke-width="1" fill="none" stroke-dasharray="3 3"></path><path d="M282 96L282 107" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M282 113L279.1 106L284.9 106Z" fill="#334155" stroke="none"></path><path d="M282 143L282 132" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M282 126L284.9 133L279.1 133Z" fill="#334155" stroke="none"></path><text x="292" y="124" text-anchor="start">h</text></g></g></svg></div></details></figure><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="B2" data-option="0" aria-pressed="false"><span class="option-prefix">i</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>&gt;</mo><mfrac displaystyle="true"><mi>W</mi><mn>2</mn></mfrac></mrow></semantics></math></span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="B2" data-option="1" aria-pressed="false"><span class="option-prefix">ii</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>&gt;</mo><mfrac displaystyle="true"><mi>W</mi><mn>3</mn></mfrac></mrow></semantics></math></span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="B2" data-option="2" aria-pressed="false"><span class="option-prefix">iii</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>&gt;</mo><mfrac displaystyle="true"><mrow><mn>5</mn><mi>W</mi></mrow><mn>9</mn></mfrac></mrow></semantics></math></span></button></div><p class="pan-task">α) Να επιλέξετε τη σωστή απάντηση (2 μονάδες).<br>β) Να δικαιολογήσετε την επιλογή σας (6 μονάδες).</p><div class="pan-feedback" id="pan-feedback-B2" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="B2" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-B2" hidden="">Πάρε ροπές ως προς την ακμή του εμποδίου τη στιγμή που ο τροχός χάνει την επαφή με το έδαφος.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="B2" aria-expanded="false" aria-controls="pan-solution-B2">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-B2" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-B" data-k="stereo" data-c="wheel-step"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">ροπές ως προς την ακμή: F &gt; W/3</span></button></div><p>Στο όριο ανύψωσης ο τροχός στρέφεται γύρω από την ακμή Α. Ο βραχίονας του βάρους είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>W</mi></msub><mo>=</mo><msqrt><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>2</mn><mi>R</mi><mi>h</mi><mo>−</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>3</mn><mi>R</mi><mi>/</mi><mn>5</mn></mrow></semantics></math>. Η F ασκείται στο <b>ανώτατο σημείο</b>, συνεπώς ο δικός της βραχίονας είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>F</mi></msub><mo>=</mo><mn>2</mn><mi>R</mi><mo>−</mo><mi>h</mi><mo>=</mo><mn>9</mn><mi>R</mi><mi>/</mi><mn>5</mn></mrow></semantics></math>.</p><p>Απαιτείται <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><msub><mi>d</mi><mi>F</mi></msub><mo>&gt;</mo><mi>W</mi><msub><mi>d</mi><mi>W</mi></msub></mrow></semantics></math>, δηλαδή <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>F</mi><mo>&gt;</mo><mi>W</mi><mi>/</mi><mn>3</mn></mrow></menclose></semantics></math>, επιλογή ii.</p></div></article><article class="question-card pan-card" id="pan-card-B3"><div class="question-header-top"><span class="question-number">Β3</span><span class="question-source">9 μονάδες</span></div><div class="question-text">Σφαίρα Σ₁ μάζας <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>=</mo><mi>m</mi></mrow></semantics></math> συγκρούεται ελαστικά και έκκεντρα με άλλη ακίνητη σφαίρα Σ₂ ίσης μάζας <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mn>2</mn></msub><mo>=</mo><mi>m</mi></mrow></semantics></math>. Μετά την κρούση οι σφαίρες κινούνται σε διευθύνσεις που σχηματίζουν μεταξύ τους γωνία:</div><div class="options-container "><button type="button" class="option-btn" data-pan-action="choose" data-q="B3" data-option="0" aria-pressed="false"><span class="option-prefix">i</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>30</mn><mo>∘</mo></msup></semantics></math></span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="B3" data-option="1" aria-pressed="false"><span class="option-prefix">ii</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>60</mn><mo>∘</mo></msup></semantics></math></span></button><button type="button" class="option-btn" data-pan-action="choose" data-q="B3" data-option="2" aria-pressed="false"><span class="option-prefix">iii</span><span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup></semantics></math></span></button></div><p class="pan-task">α) Να επιλέξετε τη σωστή απάντηση (2 μονάδες).<br>β) Να δικαιολογήσετε την επιλογή σας (7 μονάδες).</p><div class="pan-feedback" id="pan-feedback-B3" role="status" aria-live="polite"></div><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="B3" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-B3" hidden="">Σύγκρινε το τετράγωνο της διανυσματικής σχέσης ορμής με τη σχέση διατήρησης κινητικής ενέργειας.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="B3" aria-expanded="false" aria-controls="pan-solution-B3">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-B3" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-B" data-k="pan" data-c="r26-b3-elastic"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">ίσες μάζες, ελαστική ⇒ οι ταχύτητες κάθετες</span></button></div><p>Από ορμή <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>υ</mi><mo accent="true">→</mo></mover><mo>=</mo><msub><mover><mi>υ</mi><mo accent="true">→</mo></mover><mn>1</mn></msub><mi>′</mi><mo>+</mo><msub><mover><mi>υ</mi><mo accent="true">→</mo></mover><mn>2</mn></msub><mi>′</mi></mrow></semantics></math>. Υψώνοντας στο τετράγωνο: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>υ</mi><mn>2</mn></msup><mo>=</mo><msub><mi>υ</mi><mn>1</mn></msub><msup><mi>′</mi><mn>2</mn></msup><mo>+</mo><msub><mi>υ</mi><mn>2</mn></msub><msup><mi>′</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><msub><mover><mi>υ</mi><mo accent="true">→</mo></mover><mn>1</mn></msub><mi>′</mi><mo>⋅</mo><msub><mover><mi>υ</mi><mo accent="true">→</mo></mover><mn>2</mn></msub><mi>′</mi></mrow></semantics></math>. Η διατήρηση κινητικής ενέργειας δίνει <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>υ</mi><mn>2</mn></msup><mo>=</mo><msub><mi>υ</mi><mn>1</mn></msub><msup><mi>′</mi><mn>2</mn></msup><mo>+</mo><msub><mi>υ</mi><mn>2</mn></msub><msup><mi>′</mi><mn>2</mn></msup></mrow></semantics></math>. Άρα το εσωτερικό γινόμενο είναι μηδέν και οι δύο μη μηδενικές τελικές ταχύτητες είναι κάθετες: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><msup><mn>90</mn><mo>∘</mo></msup></menclose></semantics></math>, επιλογή iii.</p></div></article><h3 class="pan-section" id="pan-section-G">Θέμα Γ · 25 μονάδες</h3><div class="pan-context"></div><div class="pan-given"><ul><li><i>Η σταθερά π να μην αντικατασταθεί.</i></li><li><i>Τις απαραίτητες φυσικές σταθερές που δεν δίνονται να τις αναζητήσετε στον πίνακα δεδομένων και τύπων που επισυνάπτεται.</i></li><li><i>Οι πειραματικές διατάξεις βρίσκονται σε χώρο υψηλού κενού.</i></li><li><i>Το σχήμα δεν είναι υπό κλίμακα.</i></li></ul>Από τον πίνακα δεδομένων: φορτίο ηλεκτρονίου <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>6</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>19</mn></mrow></msup><mspace width="0.167em"></mspace><mi mathvariant="normal">C</mi></mrow></semantics></math>.</div><article class="question-card pan-card" id="pan-card-G1"><div class="question-header-top"><span class="question-number">Γ1</span><span class="question-source">13 μονάδες</span></div><div class="question-text">Στο σχήμα παριστάνεται μία διάταξη μελέτης φωτοηλεκτρικού φαινομένου. Το μέταλλο της καθόδου φωτίζεται με μονοχρωματική ακτινοβολία συχνότητας <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi></semantics></math> και μήκους κύματος <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>150</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">n</mi><mi mathvariant="normal">m</mi></mrow></mrow></semantics></math>, με αποτέλεσμα να εξέρχονται φωτοηλεκτρόνια φορτίου <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi></semantics></math>, μάζας <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>e</mi></msub><mo>=</mo><mn>9</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>31</mn></mrow></msup><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">g</mi></mrow></mrow></semantics></math> και κινητικής ενέργειας <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mn>1</mn></msub></semantics></math>. Δίνεται ότι το έργο εξαγωγής του μετάλλου της καθόδου είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>=</mo><mn>3</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">V</mi></mrow></mrow></semantics></math>, το γινόμενο <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mi>c</mi><mo>=</mo><mn>1200</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">V</mi><mo mathvariant="normal">⋅</mo><mi mathvariant="normal">n</mi><mi mathvariant="normal">m</mi></mrow></mrow></semantics></math> και ότι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">V</mi></mrow><mo>=</mo><mn>1</mn><mo>,</mo><mn>6</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>19</mn></mrow></msup><mspace width="0.167em"></mspace><mi mathvariant="normal">J</mi></mrow></semantics></math>.<br><b>α)</b> Να υπολογίσετε την κινητική ενέργεια <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mn>1</mn></msub></semantics></math> με την οποία εξέρχονται τα φωτοηλεκτρόνια από την κάθοδο (μονάδες 4) και το δυναμικό (τάση) αποκοπής για το μέταλλο της καθόδου (μονάδες 3).<br><b>β)</b> Αν η τάση μεταξύ ανόδου και καθόδου είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mn>40</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">V</mi></mrow></semantics></math>, να δείξετε ότι η ταχύτητα με την οποία φτάνουν τα εξερχόμενα από την κάθοδο φωτοηλεκτρόνια στην άνοδο είναι ίση με <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>⋅</mo><msup><mn>10</mn><mn>6</mn></msup><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">s</mi></mrow></mrow></semantics></math> (μονάδες 6).</div><figure class="pan-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 245" style="max-width:300px" role="img" aria-label="Φωτοκύτταρο σε χώρο υψηλού κενού: φωτιζόμενη κάθοδος K1, άνοδος K2 με οπή, μικροαμπερόμετρο μA και πηγή τάσης V με τον αρνητικό πόλο προς την κάθοδο"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><rect x="92" y="24" width="200" height="98" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="6 4"></rect><text x="192" y="16" text-anchor="middle" font-size="14">χώρος υψηλού κενού</text><rect x="110" y="32" width="10" height="80" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><text x="136" y="104" text-anchor="start" font-size="16">K<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">​</tspan></text><path d="M128 30q4 3 2 7q-4 3 2 7q4 3 2 7" stroke="#334155" stroke-width="1.2" fill="none"></path><path d="M134 34q4 3 2 7q-4 3 2 7q4 3 2 7" stroke="#334155" stroke-width="1.2" fill="none"></path><path d="M140 38q4 3 2 7q-4 3 2 7q4 3 2 7" stroke="#334155" stroke-width="1.2" fill="none"></path><circle cx="120" cy="72" r="3" fill="#1e293b"></circle><path d="M120 72L145 72" stroke="#334155" stroke-width="1.6" fill="none"></path><path d="M152 72L144 75.4L144 68.6Z" fill="#334155" stroke="none"></path><rect x="240" y="32" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><rect x="240" y="78" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><circle cx="250" cy="72" r="3" fill="#1e293b"></circle><path d="M250 72L279 72" stroke="#334155" stroke-width="1.6" fill="none"></path><path d="M286 72L278 75.4L278 68.6Z" fill="#334155" stroke="none"></path><text x="258" y="104" text-anchor="start" font-size="16">K<tspan dy="4" font-size="11">2</tspan><tspan dy="-4">​</tspan></text><path d="M110 72H40V200H148M164 200H245V176M245 146V112" stroke="#334155" stroke-width="1.8" fill="none"></path><path d="M150 190v20" stroke="#334155" stroke-width="4" fill="none"></path><path d="M162 182v36" stroke="#334155" stroke-width="2" fill="none"></path><text x="140" y="186" text-anchor="end" font-size="16">−</text><text x="172" y="182" text-anchor="start" font-size="16">+</text><text x="158" y="236" text-anchor="middle" font-size="16">V</text><circle cx="245" cy="161" r="15" stroke="#334155" stroke-width="2" fill="none"></circle><path d="M237 169L250.5 155.5" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M254 152L251.5 158L248 154.5Z" fill="#334155" stroke="none"></path><text x="266" y="176" text-anchor="start" font-size="16">μA</text></g></svg><details class="pan-figure-zoom"><summary>Μεγέθυνση σχήματος</summary><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 245" style="max-width:300px" role="img" aria-label="Φωτοκύτταρο σε χώρο υψηλού κενού: φωτιζόμενη κάθοδος K1, άνοδος K2 με οπή, μικροαμπερόμετρο μA και πηγή τάσης V με τον αρνητικό πόλο προς την κάθοδο"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><rect x="92" y="24" width="200" height="98" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="6 4"></rect><text x="192" y="16" text-anchor="middle" font-size="14">χώρος υψηλού κενού</text><rect x="110" y="32" width="10" height="80" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><text x="136" y="104" text-anchor="start" font-size="16">K<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">​</tspan></text><path d="M128 30q4 3 2 7q-4 3 2 7q4 3 2 7" stroke="#334155" stroke-width="1.2" fill="none"></path><path d="M134 34q4 3 2 7q-4 3 2 7q4 3 2 7" stroke="#334155" stroke-width="1.2" fill="none"></path><path d="M140 38q4 3 2 7q-4 3 2 7q4 3 2 7" stroke="#334155" stroke-width="1.2" fill="none"></path><circle cx="120" cy="72" r="3" fill="#1e293b"></circle><path d="M120 72L145 72" stroke="#334155" stroke-width="1.6" fill="none"></path><path d="M152 72L144 75.4L144 68.6Z" fill="#334155" stroke="none"></path><rect x="240" y="32" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><rect x="240" y="78" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><circle cx="250" cy="72" r="3" fill="#1e293b"></circle><path d="M250 72L279 72" stroke="#334155" stroke-width="1.6" fill="none"></path><path d="M286 72L278 75.4L278 68.6Z" fill="#334155" stroke="none"></path><text x="258" y="104" text-anchor="start" font-size="16">K<tspan dy="4" font-size="11">2</tspan><tspan dy="-4">​</tspan></text><path d="M110 72H40V200H148M164 200H245V176M245 146V112" stroke="#334155" stroke-width="1.8" fill="none"></path><path d="M150 190v20" stroke="#334155" stroke-width="4" fill="none"></path><path d="M162 182v36" stroke="#334155" stroke-width="2" fill="none"></path><text x="140" y="186" text-anchor="end" font-size="16">−</text><text x="172" y="182" text-anchor="start" font-size="16">+</text><text x="158" y="236" text-anchor="middle" font-size="16">V</text><circle cx="245" cy="161" r="15" stroke="#334155" stroke-width="2" fill="none"></circle><path d="M237 169L250.5 155.5" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M254 152L251.5 158L248 154.5Z" fill="#334155" stroke="none"></path><text x="266" y="176" text-anchor="start" font-size="16">μA</text></g></svg></div></details></figure><div class="pan-fields"><label class="pan-field"><span>K₁ (eV)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="G1" data-field="0" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-G1-0"></span></label><label class="pan-field"><span>Τάση αποκοπής (μέτρο) (V)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="G1" data-field="1" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-G1-1"></span></label><label class="pan-field"><span>Ταχύτητα στην άνοδο (m/s)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="G1" data-field="2" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-G1-2"></span></label></div><button type="button" class="next-btn pan-check" data-pan-action="check" data-q="G1">Έλεγχος απάντησης</button><div class="pan-feedback" id="pan-feedback-G1" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Γ1"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="G1" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-G1" hidden="">Βρες πρώτα την ενέργεια του φωτονίου από το μήκος κύματος και αφαίρεσε το έργο εξαγωγής.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="G1" aria-expanded="false" aria-controls="pan-solution-G1">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-G1" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-C" data-k="pan" data-c="r26-c1-accel"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">Γ1: K₁ = 5 eV, V₀ = 5 V, με 40 V ⇒ υ = 4·10⁶ m/s</span></button></div><p>Η ενέργεια φωτονίου είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>γ</mi></msub><mo>=</mo><mi>h</mi><mi>c</mi><mi>/</mi><mi>λ</mi><mo>=</mo><mn>1200</mn><mi>/</mi><mn>150</mn><mo>=</mo><mn>8</mn><mspace width="0.167em"></mspace><mi>e</mi><mi>V</mi></mrow></semantics></math>. Από Einstein: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>K</mi><mn>1</mn></msub><mo>=</mo><mn>8</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>5</mn><mspace width="0.167em"></mspace><mi>e</mi><mi>V</mi><mo>=</mo><mn>8</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>19</mn></mrow></msup><mspace width="0.167em"></mspace><mi>J</mi></mrow></menclose></semantics></math>. Η τάση αποκοπής κατά απόλυτη τιμή είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>=</mo><msub><mi>K</mi><mn>1</mn></msub><mi>/</mi><mi>e</mi><mo>=</mo><mn>5</mn><mspace width="0.167em"></mspace><mi>V</mi></mrow></menclose></semantics></math>.</p><p>Με επιταχυντική τάση ανόδου–καθόδου 40 V, το ηλεκτρόνιο κερδίζει 40 eV: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>2</mn></msub><mo>=</mo><mn>45</mn><mspace width="0.167em"></mspace><mi>e</mi><mi>V</mi><mo>=</mo><mn>7</mn><mo>,</mo><mn>2</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>18</mn></mrow></msup><mspace width="0.167em"></mspace><mi>J</mi></mrow></semantics></math>. Έτσι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>υ</mi><mo>=</mo><msqrt><mrow><mn>2</mn><msub><mi>K</mi><mn>2</mn></msub><mi>/</mi><msub><mi>m</mi><mi>e</mi></msub></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>1</mn><mo>,</mo><mn>6</mn><mo>⋅</mo><msup><mn>10</mn><mn>13</mn></msup></mrow></msqrt><mo>=</mo><menclose notation="box"><mrow><mn>4</mn><mo>⋅</mo><msup><mn>10</mn><mn>6</mn></msup><mspace width="0.167em"></mspace><mi>m</mi><mi>/</mi><mi>s</mi></mrow></menclose></mrow></semantics></math>.</p></div></article><article class="question-card pan-card" id="pan-card-G2"><div class="question-header-top"><span class="question-number">Γ2</span><span class="question-source">12 μονάδες</span></div><div class="question-text">Ένα από τα φωτοηλεκτρόνια της προηγούμενης διάταξης φτάνει στην άνοδο με ταχύτητα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>⋅</mo><msup><mn>10</mn><mn>6</mn></msup><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">s</mi></mrow></mrow></semantics></math> και διέρχεται από μια μικρή οπή, η οποία βρίσκεται στο κέντρο της. Στη συνέχεια το φωτοηλεκτρόνιο εισέρχεται με την ταχύτητα αυτή κάθετα σε ομογενές μαγνητικό πεδίο έντασης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>18</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">T</mi></mrow></mrow></semantics></math>, όπως φαίνεται στο σχήμα και, διαγράφοντας ημικύκλιο, εξέρχεται από αυτό.<br><b>α)</b> Να υπολογίσετε τον χρόνο κίνησης του φωτοηλεκτρονίου μέσα στο μαγνητικό πεδίο (μονάδες 5).<br><b>β)</b> Να υπολογίσετε το μέτρο της μεταβολής της ορμής του φωτοηλεκτρονίου μεταξύ εισόδου και εξόδου (μονάδες 7).</div><figure class="pan-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" style="max-width:260px" role="img" aria-label="Το φωτοηλεκτρόνιο περνά από την οπή της ανόδου K2 και διαγράφει ημικύκλιο μέσα σε μαγνητικό πεδίο B με φορά προς τη σελίδα"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><rect x="42" y="12" width="200" height="236" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="8 5"></rect><rect x="30" y="20" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><rect x="30" y="66" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><text x="52" y="98" text-anchor="start" font-size="16">K<tspan dy="4" font-size="11">2</tspan><tspan dy="-4">​</tspan></text><path d="M40 60A90 90 0 0 1 40 240" stroke="#334155" stroke-width="2" fill="none"></path><circle cx="40" cy="60" r="3.5" fill="#1e293b"></circle><path d="M40 60L72 60" stroke="#334155" stroke-width="1.8" fill="none"></path><path d="M80 60L71 63.8L71 56.2Z" fill="#334155" stroke="none"></path><circle cx="200" cy="36" r="9" stroke="#334155" stroke-width="1.4" fill="none"></circle><path d="M193.7 29.7L206.3 42.3M206.3 29.7L193.7 42.3" stroke="#334155" stroke-width="1.4" fill="none"></path><text x="222" y="43" text-anchor="middle" font-size="16">B</text><path d="M217 28.3L224 28.3" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M228 28.3L223 30.4L223 26.2Z" fill="#1e293b" stroke="none"></path></g></svg><details class="pan-figure-zoom"><summary>Μεγέθυνση σχήματος</summary><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" style="max-width:260px" role="img" aria-label="Το φωτοηλεκτρόνιο περνά από την οπή της ανόδου K2 και διαγράφει ημικύκλιο μέσα σε μαγνητικό πεδίο B με φορά προς τη σελίδα"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><rect x="42" y="12" width="200" height="236" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="8 5"></rect><rect x="30" y="20" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><rect x="30" y="66" width="10" height="34" stroke="#334155" stroke-width="1.6" fill="#e2e8f0"></rect><text x="52" y="98" text-anchor="start" font-size="16">K<tspan dy="4" font-size="11">2</tspan><tspan dy="-4">​</tspan></text><path d="M40 60A90 90 0 0 1 40 240" stroke="#334155" stroke-width="2" fill="none"></path><circle cx="40" cy="60" r="3.5" fill="#1e293b"></circle><path d="M40 60L72 60" stroke="#334155" stroke-width="1.8" fill="none"></path><path d="M80 60L71 63.8L71 56.2Z" fill="#334155" stroke="none"></path><circle cx="200" cy="36" r="9" stroke="#334155" stroke-width="1.4" fill="none"></circle><path d="M193.7 29.7L206.3 42.3M206.3 29.7L193.7 42.3" stroke="#334155" stroke-width="1.4" fill="none"></path><text x="222" y="43" text-anchor="middle" font-size="16">B</text><path d="M217 28.3L224 28.3" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M228 28.3L223 30.4L223 26.2Z" fill="#1e293b" stroke="none"></path></g></svg></div></details></figure><div class="pan-fields"><label class="pan-field"><span>Χρόνος σε s (μπορείς να γράψεις 3,125*pi*10^-10) (s)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="G2" data-field="0" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-G2-0"></span></label><label class="pan-field"><span>|Δp| (kg·m/s)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="G2" data-field="1" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-G2-1"></span></label></div><button type="button" class="next-btn pan-check" data-pan-action="check" data-q="G2">Έλεγχος απάντησης</button><div class="pan-feedback" id="pan-feedback-G2" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Γ2"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="G2" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-G2" hidden="">Χρησιμοποίησε τη δύναμη Lorentz ως κεντρομόλο. Για τη μεταβολή ορμής σχεδίασε τα διανύσματα στα άκρα του ημικυκλίου.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="G2" aria-expanded="false" aria-controls="pan-solution-G2">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-G2" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-C" data-k="pan" data-c="r26-c2-semi"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">Γ2: χρόνος ημικυκλίου και |Δp| = 2m<sub>e</sub>υ</span></button></div><p>Η Lorentz είναι κεντρομόλος: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mi>υ</mi><mi>B</mi><mo>=</mo><msub><mi>m</mi><mi>e</mi></msub><msup><mi>υ</mi><mn>2</mn></msup><mi>/</mi><mi>R</mi></mrow></semantics></math>, άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msub><mi>m</mi><mi>e</mi></msub><mi>υ</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></semantics></math>. Ο χρόνος για ημικύκλιο είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>π</mi><mi>R</mi><mi>/</mi><mi>υ</mi><mo>=</mo><mi>π</mi><msub><mi>m</mi><mi>e</mi></msub><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></semantics></math>.</p><p>Με B=18 mT προκύπτει <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>t</mi><mo>=</mo><mn>3</mn><mo>,</mo><mn>125</mn><mi>π</mi><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>10</mn></mrow></msup><mspace width="0.167em"></mspace><mi>s</mi></mrow></menclose></semantics></math>. Η ταχύτητα εξόδου είναι αντίθετη της αρχικής και ίσου μέτρου, άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>Δ</mi><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>2</mn><msub><mi>m</mi><mi>e</mi></msub><mi>υ</mi><mo>=</mo><menclose notation="box"><mrow><mn>7</mn><mo>,</mo><mn>2</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>24</mn></mrow></msup><mspace width="0.167em"></mspace><mi>k</mi><mi>g</mi><mspace width="0.167em"></mspace><mi>m</mi><mi>/</mi><mi>s</mi></mrow></menclose></mrow></semantics></math>.</p></div></article><h3 class="pan-section" id="pan-section-D">Θέμα Δ · 25 μονάδες</h3><div class="pan-context">Ο αγωγός ΚΛ του παρακάτω σχήματος έχει μήκος <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>1</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">m</mi></mrow></semantics></math>, μάζα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi></semantics></math>, αντίσταση <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi mathvariant="normal">Κ</mi><mi mathvariant="normal">Λ</mi></mrow></msub><mo>=</mo><mn>1</mn><mspace width="0.167em"></mspace><mi>Ω</mi></mrow></semantics></math> και συνδέεται μέσω αβαρούς και μη εκτατού νήματος με σώμα Σ₁ μάζας <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>5</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">g</mi></mrow></mrow></semantics></math>. Ο αγωγός μπορεί να κινείται χωρίς τριβές πάνω στους οριζόντιους παράλληλους αγωγούς ΘΔ και ΙΖ, μένοντας διαρκώς κάθετος και σε επαφή με αυτούς. Οι αγωγοί ΘΔ και ΙΖ έχουν αμελητέα αντίσταση. Τα άκρα Δ και Ζ των αγωγών ΘΔ και ΙΖ συνδέονται με συσκευή Σ αντίστασης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>Σ</mi></msub></semantics></math>, η οποία λειτουργεί κανονικά όταν στα άκρα της υπάρχει τάση 4 V, οπότε και αποδίδει θερμική ισχύ 8 W. Το σώμα Σ₁ είναι στερεωμένο στο άκρο οριζόντιου ιδανικού ελατηρίου σταθεράς <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>8</mn><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">N</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">m</mi></mrow></mrow></semantics></math> και βρίσκεται πάνω σε λείο οριζόντιο δάπεδο.<p>Το σύστημα αγωγού-σώματος Σ₁ ισορροπεί με την επίδραση οριζόντιας σταθερής δύναμης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">N</mi></mrow></semantics></math>, η οποία ασκείται στο μέσο του αγωγού ΚΛ. Το ελατήριο βρίσκεται σε επιμήκυνση <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><msub><mo>ℓ</mo><mn>0</mn></msub></mrow></semantics></math> από τη θέση φυσικού μήκους (Θ.Φ.Μ.).</p><figure class="pan-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 270" style="max-width:770px" role="img" aria-label="Σώμα Σ1 σε επιμηκυμένο ελατήριο συνδεδεμένο με νήμα στη ράβδο ΚΛ αντίστασης RΚΛ, πάνω στις παράλληλες ράγες ΘΔ και ΙΖ· η δύναμη F ασκείται στο μέσο της ράβδου· μαγνητικό πεδίο B προς τη σελίδα· στα άκρα Δ, Ζ η συσκευή Σ· σε μεταγενέστερη θέση η ράβδος κινείται με οριακή ταχύτητα"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><path d="M34 112L34 168" stroke="#334155" stroke-width="2" fill="none"></path><path d="M34 114l-9 9M34 124l-9 9M34 134l-9 9M34 144l-9 9M34 154l-9 9M34 164l-9 9" stroke="#334155" stroke-width="1.1" fill="none"></path><path d="M34 140L44 140L52.5 149L61 131L69.5 149L78 131L86.5 149L95 131L103.5 149L112 131L120.5 149L129 131L137.5 149L146 131L154.5 149L163 131L171.5 149L180 140L190 140" stroke="#334155" stroke-width="1.8" fill="none"></path><text x="70" y="122" text-anchor="middle">k</text><rect x="190" y="126" width="34" height="28" stroke="#334155" stroke-width="2" fill="#fff"></rect><text x="232" y="134" text-anchor="start" font-size="16">Σ<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">​</tspan></text><path d="M128 96L128 210" stroke="#64748b" stroke-width="1.2" fill="none" stroke-dasharray="4 4"></path><text x="128" y="88" text-anchor="middle" font-size="16">Θ.Φ.Μ.</text><path d="M130 196L188 196" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M188 196L181 198.8L181 193.2Z" fill="#334155"></path><path d="M130 196L137 198.8L137 193.2Z" fill="#334155"></path><text x="159" y="222" text-anchor="middle" font-size="17">Δℓ<tspan dy="5" font-size="12">0</tspan><tspan dy="-5">​</tspan></text><path d="M190 160L190 204" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="3 3"></path><text x="212" y="70" text-anchor="middle" font-size="16">(+)</text><path d="M196 78L229 78" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M236 78L228 81.4L228 74.6Z" fill="#334155" stroke="none"></path><path d="M224 140L330 140" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M268 236L293.9 152.7" stroke="#334155" stroke-width="1.2" fill="none"></path><path d="M296 146L296.8 154.6L290.4 152.6Z" fill="#334155" stroke="none"></path><text x="262" y="254" text-anchor="middle" font-size="16">νήμα</text><path d="M150 50L700 50" stroke="#334155" stroke-width="2" fill="none"></path><path d="M150 230L700 230" stroke="#334155" stroke-width="2" fill="none"></path><text x="150" y="40" text-anchor="middle">Θ</text><text x="150" y="254" text-anchor="middle">Ι</text><text x="700" y="40" text-anchor="middle">Δ</text><text x="700" y="254" text-anchor="middle">Ζ</text><rect x="298" y="14" width="360" height="252" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="7 5"></rect><text x="340" y="34" text-anchor="start" font-size="16">(t<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">​</tspan>=0)</text><circle cx="606" cy="30" r="9" stroke="#334155" stroke-width="1.4" fill="none"></circle><path d="M599.7 23.7L612.3 36.3M612.3 23.7L599.7 36.3" stroke="#334155" stroke-width="1.4" fill="none"></path><text x="628" y="37" text-anchor="middle" font-size="16">B</text><path d="M623 22.3L630 22.3" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M634 22.3L629 24.4L629 20.2Z" fill="#1e293b" stroke="none"></path><rect x="326" y="48" width="8" height="184" stroke="#334155" stroke-width="1.6" fill="#fff"></rect><circle cx="330" cy="50" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><circle cx="330" cy="230" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><rect x="476" y="48" width="8" height="184" stroke="#334155" stroke-width="1.6" fill="#fff"></rect><circle cx="480" cy="50" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><circle cx="480" cy="230" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><path d="M330 168L330 172L326 176.2L334 180.4L326 184.6L334 188.8L326 193L334 197.2L326 201.4L334 205.6L326 209.8L330 214L330 218" stroke="#334155" stroke-width="1.4" fill="none"></path><text x="344" y="214" text-anchor="start" font-size="16">R<tspan dy="4" font-size="11">ΚΛ</tspan><tspan dy="-4">​</tspan></text><text x="320" y="42" text-anchor="end">Κ</text><text x="344" y="252" text-anchor="start">Λ</text><circle cx="330" cy="140" r="3.2" fill="#1e293b"></circle><path d="M330 140L382 140" stroke="#334155" stroke-width="2" fill="none"></path><path d="M392 140L381 144.6L381 135.4Z" fill="#334155" stroke="none"></path><text x="382" y="130" text-anchor="middle" font-size="17">F</text><path d="M376.7 114.4L384.3 114.4" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M388.3 114.4L383.3 116.5L383.3 112.3Z" fill="#1e293b" stroke="none"></path><path d="M484 112L522 112" stroke="#334155" stroke-width="1.8" fill="none"></path><path d="M532 112L521 116.6L521 107.4Z" fill="#334155" stroke="none"></path><text x="500" y="100" text-anchor="start" font-size="17">υ<tspan dy="5" font-size="12">ορ</tspan><tspan dy="-5">​</tspan></text><path d="M700 50V114M700 166V230" stroke="#334155" stroke-width="2" fill="none"></path><rect x="680" y="114" width="40" height="52" stroke="#334155" stroke-width="2" fill="#fff"></rect><text x="700" y="146" text-anchor="middle" font-size="17">Σ</text><text x="730" y="196" text-anchor="start" font-size="17">R<tspan dy="5" font-size="12">Σ</tspan><tspan dy="-5">​</tspan></text></g></svg><details class="pan-figure-zoom"><summary>Μεγέθυνση σχήματος</summary><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 270" style="max-width:770px" role="img" aria-label="Σώμα Σ1 σε επιμηκυμένο ελατήριο συνδεδεμένο με νήμα στη ράβδο ΚΛ αντίστασης RΚΛ, πάνω στις παράλληλες ράγες ΘΔ και ΙΖ· η δύναμη F ασκείται στο μέσο της ράβδου· μαγνητικό πεδίο B προς τη σελίδα· στα άκρα Δ, Ζ η συσκευή Σ· σε μεταγενέστερη θέση η ράβδος κινείται με οριακή ταχύτητα"><g font-family="Arial,sans-serif" font-size="18" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round"><path d="M34 112L34 168" stroke="#334155" stroke-width="2" fill="none"></path><path d="M34 114l-9 9M34 124l-9 9M34 134l-9 9M34 144l-9 9M34 154l-9 9M34 164l-9 9" stroke="#334155" stroke-width="1.1" fill="none"></path><path d="M34 140L44 140L52.5 149L61 131L69.5 149L78 131L86.5 149L95 131L103.5 149L112 131L120.5 149L129 131L137.5 149L146 131L154.5 149L163 131L171.5 149L180 140L190 140" stroke="#334155" stroke-width="1.8" fill="none"></path><text x="70" y="122" text-anchor="middle">k</text><rect x="190" y="126" width="34" height="28" stroke="#334155" stroke-width="2" fill="#fff"></rect><text x="232" y="134" text-anchor="start" font-size="16">Σ<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">​</tspan></text><path d="M128 96L128 210" stroke="#64748b" stroke-width="1.2" fill="none" stroke-dasharray="4 4"></path><text x="128" y="88" text-anchor="middle" font-size="16">Θ.Φ.Μ.</text><path d="M130 196L188 196" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M188 196L181 198.8L181 193.2Z" fill="#334155"></path><path d="M130 196L137 198.8L137 193.2Z" fill="#334155"></path><text x="159" y="222" text-anchor="middle" font-size="17">Δℓ<tspan dy="5" font-size="12">0</tspan><tspan dy="-5">​</tspan></text><path d="M190 160L190 204" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="3 3"></path><text x="212" y="70" text-anchor="middle" font-size="16">(+)</text><path d="M196 78L229 78" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M236 78L228 81.4L228 74.6Z" fill="#334155" stroke="none"></path><path d="M224 140L330 140" stroke="#334155" stroke-width="1.4" fill="none"></path><path d="M268 236L293.9 152.7" stroke="#334155" stroke-width="1.2" fill="none"></path><path d="M296 146L296.8 154.6L290.4 152.6Z" fill="#334155" stroke="none"></path><text x="262" y="254" text-anchor="middle" font-size="16">νήμα</text><path d="M150 50L700 50" stroke="#334155" stroke-width="2" fill="none"></path><path d="M150 230L700 230" stroke="#334155" stroke-width="2" fill="none"></path><text x="150" y="40" text-anchor="middle">Θ</text><text x="150" y="254" text-anchor="middle">Ι</text><text x="700" y="40" text-anchor="middle">Δ</text><text x="700" y="254" text-anchor="middle">Ζ</text><rect x="298" y="14" width="360" height="252" stroke="#334155" stroke-width="1.4" fill="none" stroke-dasharray="7 5"></rect><text x="340" y="34" text-anchor="start" font-size="16">(t<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">​</tspan>=0)</text><circle cx="606" cy="30" r="9" stroke="#334155" stroke-width="1.4" fill="none"></circle><path d="M599.7 23.7L612.3 36.3M612.3 23.7L599.7 36.3" stroke="#334155" stroke-width="1.4" fill="none"></path><text x="628" y="37" text-anchor="middle" font-size="16">B</text><path d="M623 22.3L630 22.3" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M634 22.3L629 24.4L629 20.2Z" fill="#1e293b" stroke="none"></path><rect x="326" y="48" width="8" height="184" stroke="#334155" stroke-width="1.6" fill="#fff"></rect><circle cx="330" cy="50" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><circle cx="330" cy="230" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><rect x="476" y="48" width="8" height="184" stroke="#334155" stroke-width="1.6" fill="#fff"></rect><circle cx="480" cy="50" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><circle cx="480" cy="230" r="4.5" stroke="#334155" stroke-width="1.4" fill="#fff"></circle><path d="M330 168L330 172L326 176.2L334 180.4L326 184.6L334 188.8L326 193L334 197.2L326 201.4L334 205.6L326 209.8L330 214L330 218" stroke="#334155" stroke-width="1.4" fill="none"></path><text x="344" y="214" text-anchor="start" font-size="16">R<tspan dy="4" font-size="11">ΚΛ</tspan><tspan dy="-4">​</tspan></text><text x="320" y="42" text-anchor="end">Κ</text><text x="344" y="252" text-anchor="start">Λ</text><circle cx="330" cy="140" r="3.2" fill="#1e293b"></circle><path d="M330 140L382 140" stroke="#334155" stroke-width="2" fill="none"></path><path d="M392 140L381 144.6L381 135.4Z" fill="#334155" stroke="none"></path><text x="382" y="130" text-anchor="middle" font-size="17">F</text><path d="M376.7 114.4L384.3 114.4" stroke="#1e293b" stroke-width="1.2" fill="none"></path><path d="M388.3 114.4L383.3 116.5L383.3 112.3Z" fill="#1e293b" stroke="none"></path><path d="M484 112L522 112" stroke="#334155" stroke-width="1.8" fill="none"></path><path d="M532 112L521 116.6L521 107.4Z" fill="#334155" stroke="none"></path><text x="500" y="100" text-anchor="start" font-size="17">υ<tspan dy="5" font-size="12">ορ</tspan><tspan dy="-5">​</tspan></text><path d="M700 50V114M700 166V230" stroke="#334155" stroke-width="2" fill="none"></path><rect x="680" y="114" width="40" height="52" stroke="#334155" stroke-width="2" fill="#fff"></rect><text x="700" y="146" text-anchor="middle" font-size="17">Σ</text><text x="730" y="196" text-anchor="start" font-size="17">R<tspan dy="5" font-size="12">Σ</tspan><tspan dy="-5">​</tspan></text></g></svg></div></details></figure></div><div class="pan-given"><i>Να θεωρήσετε ότι:</i><ul><li>όλα τα σώματα της διάταξης βρίσκονται στο ίδιο οριζόντιο επίπεδο.</li><li>ο αγωγός ΚΛ κατά την κίνησή του βρίσκεται διαρκώς μέσα στο μαγνητικό πεδίο, ενώ η συσκευή Σ βρίσκεται έξω από το μαγνητικό πεδίο.</li><li>η αντίσταση του αέρα θεωρείται αμελητέα.</li><li>το σχήμα δεν είναι υπό κλίμακα.</li></ul></div><article class="question-card pan-card" id="pan-card-D1"><div class="question-header-top"><span class="question-number">Δ1</span><span class="question-source">3 μονάδες</span></div><div class="question-text">Να υπολογίσετε την επιμήκυνση <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><msub><mo>ℓ</mo><mn>0</mn></msub></mrow></semantics></math> του ελατηρίου.</div><div class="pan-fields"><label class="pan-field"><span>Δℓ₀ (m)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D1" data-field="0" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D1-0"></span></label></div><button type="button" class="next-btn pan-check" data-pan-action="check" data-q="D1">Έλεγχος απάντησης</button><div class="pan-feedback" id="pan-feedback-D1" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Δ1"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="D1" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-D1" hidden="">Σχεδίασε τις δυνάμεις στην αρχική ισορροπία και σύνδεσε την τάση με την επιμήκυνση.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="D1" aria-expanded="false" aria-controls="pan-solution-D1">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-D1" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-D" data-k="pan" data-c="r26-d1-spring"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">Δ1–Δ2: Δℓ₀ = 0,25 m και x = 0,25 συν4t</span></button></div><p>Στην αρχική ισορροπία η F εξισορροπείται από τη δύναμη του ελατηρίου μέσω του νήματος. Άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>k</mi><mi>Δ</mi><msub><mo>ℓ</mo><mn>0</mn></msub></mrow></semantics></math> και <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>Δ</mi><msub><mo>ℓ</mo><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi>/</mi><mn>8</mn><mo>=</mo><mn>0</mn><mo>,</mo><mn>25</mn><mspace width="0.167em"></mspace><mi>m</mi></mrow></menclose></semantics></math>.</p></div></article><div class="pan-context">Τη χρονική στιγμή <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></semantics></math>, κόβουμε το νήμα με αποτέλεσμα το σώμα Σ₁ να εκτελεί απλή αρμονική ταλάντωση, ενώ ο αγωγός να αρχίσει να κινείται μέσα σε ομογενές μαγνητικό πεδίο έντασης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi></semantics></math>, το οποίο είναι κάθετο στο επίπεδο που ορίζουν οι αγωγοί και έχει κατεύθυνση από τον αναγνώστη προς τη σελίδα.</div><article class="question-card pan-card" id="pan-card-D2"><div class="question-header-top"><span class="question-number">Δ2</span><span class="question-source">5 μονάδες</span></div><div class="question-text">Να γράψετε τη σχέση που δίνει την απομάκρυνση <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi></semantics></math> της απλής αρμονικής ταλάντωσης που εκτελεί το σώμα σε συνάρτηση με τον χρόνο, θεωρώντας ως θετική την προς τα δεξιά φορά.</div><div class="pan-fields"><label class="pan-field"><span>Πλάτος (m)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D2" data-field="0" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D2-0"></span></label><label class="pan-field"><span>ω (rad/s)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D2" data-field="1" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D2-1"></span></label></div><button type="button" class="next-btn pan-check" data-pan-action="check" data-q="D2">Έλεγχος απάντησης</button><div class="pan-feedback" id="pan-feedback-D2" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Δ2"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="D2" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-D2" hidden="">Βρες τη νέα θέση ισορροπίας και χρησιμοποίησε την αρχική απομάκρυνση και ταχύτητα.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="D2" aria-expanded="false" aria-controls="pan-solution-D2">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-D2" hidden=""><p>Η θέση ισορροπίας είναι η θέση φυσικού μήκους. Αρχικά <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mi>+</mi><mn>0</mn><mo>,</mo><mn>25</mn><mspace width="0.167em"></mspace><mi>m</mi></mrow></semantics></math> και <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>υ</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></semantics></math>, οπότε <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>25</mn><mspace width="0.167em"></mspace><mi>m</mi></mrow></semantics></math>. Η γωνιακή συχνότητα είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><msqrt><mrow><mi>k</mi><mi>/</mi><mi>m</mi></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>8</mn><mi>/</mi><mn>0</mn><mo>,</mo><mn>5</mn></mrow></msqrt><mo>=</mo><mn>4</mn><mspace width="0.167em"></mspace><mi>r</mi><mi>a</mi><mi>d</mi><mi>/</mi><mi>s</mi></mrow></semantics></math>. Άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>x</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn><mo>,</mo><mn>25</mn><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></menclose></semantics></math> (SI), ή ισοδύναμα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>25</mn><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mi>t</mi><mo>+</mo><mi>π</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow></semantics></math>.</p></div></article><div class="pan-context">Όταν ο αγωγός ΚΛ κινείται μέσα στο ομογενές μαγνητικό πεδίο έντασης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi></semantics></math>, αναπτύσσεται σε αυτόν ηλεκτρεγερτική δύναμη από επαγωγή (ΗΕΔ) <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mrow><mi mathvariant="normal">ε</mi><mi mathvariant="normal">π</mi></mrow></msub></semantics></math>.</div><article class="question-card pan-card" id="pan-card-D3"><div class="question-header-top"><span class="question-number">Δ3</span><span class="question-source">6 μονάδες</span></div><div class="question-text"><b>α)</b> Να σχεδιάσετε (μονάδα 1) και να αιτιολογήσετε (μονάδες 2) τη φορά του ρεύματος στον αγωγό ΚΛ.<br><b>β)</b> Να αποδείξετε ότι η ΗΕΔ από επαγωγή που αναπτύσσεται στα άκρα του αγωγού ΚΛ υπολογίζεται από τη σχέση <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi mathvariant="normal">ε</mi><mi mathvariant="normal">π</mi></mrow></msub><mo>=</mo><mi>B</mi><mspace width="0.167em"></mspace><mi>υ</mi><mspace width="0.167em"></mspace><mo>ℓ</mo></mrow></semantics></math> (μονάδες 3).</div><div class="pan-feedback" id="pan-feedback-D3" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Δ3"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="D3" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-D3" hidden="">Εφάρμοσε τον κανόνα του δεξιού χεριού για ένα θετικό φορτίο που κινείται μαζί με τη ράβδο.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="D3" aria-expanded="false" aria-controls="pan-solution-D3">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-D3" hidden=""><div class="kk-row"><button type="button" class="kk-link kk-D" data-k="pan" data-c="r26-d2-device"><span class="kk-tag">👁 Δες εδώ</span><span class="kk-txt">Δ3–Δ5: πολικότητα, οριακή ταχύτητα 6 m/s και Q = 4 C</span></button></div><p>Με <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>υ</mi><mo accent="true">→</mo></mover></semantics></math> δεξιά και <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover></semantics></math> προς τη σελίδα, η δύναμη σε θετικά φορτία είναι προς τα πάνω. Άρα <b>Κ (+), Λ (−)</b> και το ρεύμα μέσα στον αγωγό έχει φορά <b>Λ→Κ</b>. Η Laplace τότε είναι προς τα αριστερά και αντιστέκεται στην κίνηση, σύμφωνα με Lenz.</p><p>Σε στοιχείο μήκους <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>ℓ</mo></mrow></semantics></math> η μαγνητική δύναμη ανά μονάδα φορτίου κατά μήκος της ράβδου είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>υ</mi><mi>B</mi></mrow></semantics></math>. Συνεπώς η ΗΕΔ είναι το έργο ανά μονάδα φορτίου: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ℰ</mi><mrow><mi mathvariant="normal">ε</mi><mi mathvariant="normal">π</mi></mrow></msub><mo>=</mo><msubsup><mo>∫</mo><mi>Λ</mi><mi>K</mi></msubsup><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>υ</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mi>d</mi><mover><mo>ℓ</mo><mo accent="true">→</mo></mover><mo>=</mo><menclose notation="box"><mrow><mi>B</mi><mi>υ</mi><mo>ℓ</mo></mrow></menclose></mrow></semantics></math>.</p></div></article><article class="question-card pan-card" id="pan-card-D4"><div class="question-header-top"><span class="question-number">Δ4</span><span class="question-source">6 μονάδες</span></div><div class="question-text">Να υπολογίσετε την οριακή ταχύτητα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>υ</mi><mrow><mi mathvariant="normal">ο</mi><mi mathvariant="normal">ρ</mi></mrow></msub></semantics></math> του αγωγού ΚΛ, αν γνωρίζετε ότι η συσκευή Σ λειτουργεί κανονικά σε αυτή την ταχύτητα.</div><div class="pan-fields"><label class="pan-field"><span>I κανονικής λειτουργίας (A)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D4" data-field="0" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D4-0"></span></label><label class="pan-field"><span>B (T)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D4" data-field="1" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D4-1"></span></label><label class="pan-field"><span>υ οριακή (m/s)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D4" data-field="2" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D4-2"></span></label></div><button type="button" class="next-btn pan-check" data-pan-action="check" data-q="D4">Έλεγχος απάντησης</button><div class="pan-feedback" id="pan-feedback-D4" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Δ4"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="D4" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-D4" hidden="">Από τα στοιχεία κανονικής λειτουργίας βρες το ρεύμα. Στην οριακή ταχύτητα η επιτάχυνση μηδενίζεται.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="D4" aria-expanded="false" aria-controls="pan-solution-D4">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-D4" hidden=""><p>Στην κανονική λειτουργία <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mi>P</mi><mi>/</mi><mi>V</mi><mo>=</mo><mn>8</mn><mi>/</mi><mn>4</mn><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><mi>A</mi></mrow></semantics></math> και <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>Σ</mi></msub><mo>=</mo><msup><mi>V</mi><mn>2</mn></msup><mi>/</mi><mi>P</mi><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><mi>Ω</mi></mrow></semantics></math>. Στην οριακή ταχύτητα η συνισταμένη στη ράβδο μηδενίζεται: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>B</mi><mo>ℓ</mo><mi>I</mi></mrow></semantics></math>, άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>2</mn><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>⋅</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mspace width="0.167em"></mspace><mi>T</mi></mrow></semantics></math>.</p><p>Η συνολική αντίσταση είναι 3 Ω, επομένως η απαιτούμενη ΗΕΔ είναι <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℰ</mi><mo>=</mo><mi>I</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>R</mi><mi>Σ</mi></msub><mo>+</mo><msub><mi>R</mi><mrow><mi>K</mi><mi>Λ</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>6</mn><mspace width="0.167em"></mspace><mi>V</mi></mrow></semantics></math>. Άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>υ</mi><mrow><mi mathvariant="normal">ο</mi><mi mathvariant="normal">ρ</mi></mrow></msub><mo>=</mo><mi>ℰ</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo>ℓ</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>6</mn><mspace width="0.167em"></mspace><mi>m</mi><mi>/</mi><mi>s</mi></mrow></menclose></semantics></math>.</p></div></article><div class="pan-context">Ο αγωγός ΚΛ συνεχίζει την κίνησή του υπό την επίδραση της δύναμης <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi></semantics></math>, με την οριακή ταχύτητα που έχει αποκτήσει.</div><article class="question-card pan-card" id="pan-card-D5"><div class="question-header-top"><span class="question-number">Δ5</span><span class="question-source">5 μονάδες</span></div><div class="question-text">Να υπολογίσετε το φορτίο από επαγωγή που διέρχεται από μία διατομή του αγωγού ΚΛ σε χρονικό διάστημα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><mi>t</mi><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">s</mi></mrow></semantics></math> από τη στιγμή που απέκτησε την οριακή του ταχύτητα.</div><div class="pan-fields"><label class="pan-field"><span>Q (C)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" data-q="D5" data-field="0" placeholder="Απάντηση"><span class="pan-field-feedback" id="pan-field-D5-0"></span></label></div><button type="button" class="next-btn pan-check" data-pan-action="check" data-q="D5">Έλεγχος απάντησης</button><div class="pan-feedback" id="pan-feedback-D5" role="status" aria-live="polite"></div><label class="pan-practice-written">Η γραπτή απάντησή σου (προαιρετικά)<textarea rows="3" placeholder="Κράτησε τη λύση σου και σύγκρινέ τη με την ενδεικτική." aria-label="Γραπτή απάντηση Δ5"></textarea></label><button type="button" class="pan-solution-toggle pan-hint-toggle" data-pan-action="hint" data-q="D5" aria-expanded="false">💡 Υπόδειξη</button><div class="pan-hint" id="pan-hint-D5" hidden="">Σύνδεσε το ζητούμενο φορτίο με το ρεύμα και τη διάρκεια της οριακής κίνησης.</div><button type="button" class="pan-solution-toggle" data-pan-action="solution" data-q="D5" aria-expanded="false" aria-controls="pan-solution-D5">Εμφάνιση λύσης</button><div class="pan-solution" id="pan-solution-D5" hidden=""><p>Στην οριακή κίνηση η ΗΕΔ και το ρεύμα παραμένουν σταθερά, με <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><mi>A</mi></mrow></semantics></math>. Άρα <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>Q</mi><mo>=</mo><mi>I</mi><mi>Δ</mi><mi>t</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>4</mn><mspace width="0.167em"></mspace><mi>C</mi></mrow></menclose></semantics></math>.</p></div></article><button type="button" class="menu-btn syllabus-back-btn" data-pan-action="back">← Επιστροφή στα διαγωνίσματα</button></div>
+                <p id="pan-submit-status" class="pan-submit-status" role="status" aria-live="polite"></p>
+                <div id="pan-footer" class="pan-footer">
+                    <span id="pan-progress">Ελέγχθηκαν: 0 / 18</span>
+                    <button type="button" id="pan-submit" class="btn-submit" data-pan-action="submit" hidden="">Υποβολή</button>
+                </div>
+            </div>
+
+            </main><script src="./Φυσική · Επαναληπτικά 2026 · με λύση_files/repeat-exams.js.αρχείο λήψης"></script><script>const wideButton=document.getElementById('reading-width');
+wideButton.onclick=()=>{
+  const wide=document.querySelector('main').classList.toggle('reading-wide');
+  wideButton.setAttribute('aria-pressed',String(wide));
+  wideButton.textContent=wide?'Επαναφορά πλάτους':'Μεγέθυνση εκφώνησης';
+};
+const year=new URLSearchParams(location.search).get('year');
+const id='repeat-'+year;
+if(Object.hasOwn(window.panPHDatabase,id)){
+  openPanExamPH(id,'practice');
+}else{location.replace('index.html#epanaliptika');}</script><use-chat-gpt-ai id="USE_CHAT_GPT_AI_ROOT" class="close" data-version="8.37.4" style="transition: 0.1s ease-in-out;"><template shadowrootmode="open"><style><style data-emotion="use-chat-gpt-ai-emotion-cache" data-s=""></style></style><div id="USE_CHAT_GPT_AI_ROOT_Wrapper" translate="no" style="display: flex; flex-direction: column; flex: 1 1 0%; height: 100vh; text-align: left;"><div style="position: relative; user-select: auto; width: 480px; height: 100%; max-width: 1770px; min-width: 480px; box-sizing: border-box; flex-shrink: 0;"><div><div class="" style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"></div></div><div class="use-chat-gpt-ai-app use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-emotion-cache-80oyal"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-1n7k7j3"></div></div><div></div></div></div><link rel="stylesheet" href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/content_style.css"></template></use-chat-gpt-ai><use-chat-gpt-ai-content-menu id="USE_CHAT_GPT_AI_ROOT_Context_Menu"><template shadowrootmode="open"><div id="USE_CHAT_GPT_AI_ROOT_Context_Menu_Portal"><div class="use-chat-gpt-ai--MuiStack-root maxai--chat-hub use-chat-gpt-ai-context-menu-1ftuha6"><div class="use-chat-gpt-ai--MuiStack-root maxai-client--chat-hub--container use-chat-gpt-ai-context-menu-1tv0a4k"><div class="max-ai__click-context-menu close use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-xsjeto"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-cskh5k"><div class="use-chat-gpt-ai--MuiStack-root mini-icon-button use-chat-gpt-ai-context-menu-1rb8dr4" id="max_ai__floating_context_menu__mini_hide_button"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-sx8eqy"></div></div></div></div><div class="use-chat-gpt-ai--MuiStack-root MAX_AI_FLOATING_IMAGE_MINI_MENU use-chat-gpt-ai-context-menu-1u8sk7y"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-m6oi9e"><div class="max_ai_floating_image_dot_button use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-g85zgq"></div></div><div class="use-chat-gpt-ai--MuiStack-root max_ai_floating_image_text_button use-chat-gpt-ai-context-menu-1dt1tve"><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai-context-menu-1xbhkt2" tabindex="0" type="button"><span class="use-chat-gpt-ai--MuiButton-icon use-chat-gpt-ai--MuiButton-startIcon use-chat-gpt-ai--MuiButton-iconSizeMedium use-chat-gpt-ai-context-menu-1l6c7y9"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-nktpiw" focusable="false" aria-hidden="true" viewBox="0 0 33 32" width="33" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.3112 11.493L24.5228 7.55842L20.5882 5.76996L24.5228 3.98149L26.3112 0.046875L28.0997 3.98149L32.0343 5.76996L28.0997 7.55842L26.3112 11.493ZM26.3112 31.5238L24.5228 27.5892L20.5882 25.8007L24.5228 24.0123L26.3112 20.0777L28.0997 24.0123L32.0343 25.8007L28.0997 27.5892L26.3112 31.5238ZM12.0035 27.2315L8.42661 19.3623L0.557373 15.7854L8.42661 12.2084L12.0035 4.33919L15.5805 12.2084L23.4497 15.7854L15.5805 19.3623L12.0035 27.2315Z" fill="currentColor"></path></svg></span><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-3qrz66"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-qkfugk">Ρώτησε για αυτή την εικόνα</div></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></button><hr class="use-chat-gpt-ai--MuiDivider-root use-chat-gpt-ai--MuiDivider-fullWidth use-chat-gpt-ai--MuiDivider-vertical use-chat-gpt-ai-context-menu-krge2n"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-kyujuq"><span class=""><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation maxai_close_button use-chat-gpt-ai-context-menu-1sx8e0" tabindex="0" type="button"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-1hudmqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseOutlinedIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></button></span><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation maxai_more_close_options use-chat-gpt-ai-context-menu-61av2n" tabindex="0" type="button"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-1b6mqyd" focusable="false" aria-hidden="true" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00009 1.5V9M13.7701 4.98C14.7139 5.92409 15.3565 7.12683 15.6168 8.43614C15.8771 9.74545 15.7433 11.1025 15.2323 12.3358C14.7214 13.5691 13.8562 14.6232 12.7462 15.3648C11.6362 16.1064 10.3313 16.5022 8.99634 16.5022C7.66141 16.5022 6.35645 16.1064 5.24647 15.3648C4.13649 14.6232 3.27132 13.5691 2.76036 12.3358C2.24941 11.1025 2.11561 9.74545 2.37588 8.43614C2.63615 7.12683 3.27881 5.92409 4.22259 4.98" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg><div class="maxai__floating_image_menu__close_menu use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1oflqog"><div class="use-chat-gpt-ai--MuiList-root use-chat-gpt-ai--MuiList-padding use-chat-gpt-ai-context-menu-qgr1jc"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-2rlxtj"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1kra9q0" data-button-clicked-name="max_ai__floating_image_menu__hide_menu__this_site" role="menuitem"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-0"><span class=""><div class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai-context-menu-1pkh8h9" tabindex="0" role="button"><div class="use-chat-gpt-ai--MuiListItemText-root use-chat-gpt-ai-context-menu-8ccl31"><span class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai--MuiListItemText-primary use-chat-gpt-ai-context-menu-1g0a3y9">Απόκρυψη σε αυτόν τον ιστότοπο</span></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></div></span></div></div><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1kra9q0" data-button-clicked-name="max_ai__floating_image_menu__hide_menu__all_sites" role="menuitem"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-0"><span class=""><div class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai-context-menu-1pkh8h9" tabindex="0" role="button"><div class="use-chat-gpt-ai--MuiListItemText-root use-chat-gpt-ai-context-menu-8ccl31"><span class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai--MuiListItemText-primary use-chat-gpt-ai-context-menu-1g0a3y9">Πάντα απόκρυψη</span></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></div></span></div></div></div><hr class="use-chat-gpt-ai--MuiDivider-root use-chat-gpt-ai--MuiDivider-fullWidth use-chat-gpt-ai-context-menu-39bbo6"><li class="use-chat-gpt-ai--MuiListItem-root use-chat-gpt-ai--MuiListItem-gutters use-chat-gpt-ai--MuiListItem-padding use-chat-gpt-ai-context-menu-1chkqss"><div class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai-context-menu-1pkh8h9" tabindex="0" role="button"><div class="use-chat-gpt-ai--MuiListItemText-root use-chat-gpt-ai-context-menu-1tsvksn"><p class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai--MuiTypography-noWrap use-chat-gpt-ai-context-menu-1ry3vq9">Μπορείτε να το ενεργοποιήσετε ξανά στις <span class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai-context-menu-15c4tlz">Ρυθμίσεις</span></p></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></div></li></div></div></button></div></div></div><div class="use-chat-gpt-ai--MuiStack-root MAX_AI_FLOATING_IMAGE_MINI_MENU use-chat-gpt-ai-context-menu-1u8sk7y" data-testid="maxai__floating_image_mini_menu__first_enter_image"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-m6oi9e"><div class="max_ai_floating_image_dot_button use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-g85zgq"></div></div><div class="use-chat-gpt-ai--MuiStack-root max_ai_floating_image_text_button use-chat-gpt-ai-context-menu-1dt1tve"><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai-context-menu-1xbhkt2" tabindex="0" type="button"><span class="use-chat-gpt-ai--MuiButton-icon use-chat-gpt-ai--MuiButton-startIcon use-chat-gpt-ai--MuiButton-iconSizeMedium use-chat-gpt-ai-context-menu-1l6c7y9"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-nktpiw" focusable="false" aria-hidden="true" viewBox="0 0 33 32" width="33" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.3112 11.493L24.5228 7.55842L20.5882 5.76996L24.5228 3.98149L26.3112 0.046875L28.0997 3.98149L32.0343 5.76996L28.0997 7.55842L26.3112 11.493ZM26.3112 31.5238L24.5228 27.5892L20.5882 25.8007L24.5228 24.0123L26.3112 20.0777L28.0997 24.0123L32.0343 25.8007L28.0997 27.5892L26.3112 31.5238ZM12.0035 27.2315L8.42661 19.3623L0.557373 15.7854L8.42661 12.2084L12.0035 4.33919L15.5805 12.2084L23.4497 15.7854L15.5805 19.3623L12.0035 27.2315Z" fill="currentColor"></path></svg></span><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-3qrz66"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-qkfugk">Ρώτησε για αυτή την εικόνα</div></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></button><hr class="use-chat-gpt-ai--MuiDivider-root use-chat-gpt-ai--MuiDivider-fullWidth use-chat-gpt-ai--MuiDivider-vertical use-chat-gpt-ai-context-menu-krge2n"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-kyujuq"><span class=""><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation maxai_close_button use-chat-gpt-ai-context-menu-1sx8e0" tabindex="0" type="button"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-1hudmqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseOutlinedIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></button></span><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation maxai_more_close_options use-chat-gpt-ai-context-menu-61av2n" tabindex="0" type="button"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-1b6mqyd" focusable="false" aria-hidden="true" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00009 1.5V9M13.7701 4.98C14.7139 5.92409 15.3565 7.12683 15.6168 8.43614C15.8771 9.74545 15.7433 11.1025 15.2323 12.3358C14.7214 13.5691 13.8562 14.6232 12.7462 15.3648C11.6362 16.1064 10.3313 16.5022 8.99634 16.5022C7.66141 16.5022 6.35645 16.1064 5.24647 15.3648C4.13649 14.6232 3.27132 13.5691 2.76036 12.3358C2.24941 11.1025 2.11561 9.74545 2.37588 8.43614C2.63615 7.12683 3.27881 5.92409 4.22259 4.98" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg><div class="maxai__floating_image_menu__close_menu use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1oflqog"><div class="use-chat-gpt-ai--MuiList-root use-chat-gpt-ai--MuiList-padding use-chat-gpt-ai-context-menu-qgr1jc"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-2rlxtj"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1kra9q0" data-button-clicked-name="max_ai__floating_image_menu__hide_menu__this_site" role="menuitem"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-0"><span class=""><div class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai-context-menu-1pkh8h9" tabindex="0" role="button"><div class="use-chat-gpt-ai--MuiListItemText-root use-chat-gpt-ai-context-menu-8ccl31"><span class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai--MuiListItemText-primary use-chat-gpt-ai-context-menu-1g0a3y9">Απόκρυψη σε αυτόν τον ιστότοπο</span></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></div></span></div></div><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1kra9q0" data-button-clicked-name="max_ai__floating_image_menu__hide_menu__all_sites" role="menuitem"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-0"><span class=""><div class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai-context-menu-1pkh8h9" tabindex="0" role="button"><div class="use-chat-gpt-ai--MuiListItemText-root use-chat-gpt-ai-context-menu-8ccl31"><span class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai--MuiListItemText-primary use-chat-gpt-ai-context-menu-1g0a3y9">Πάντα απόκρυψη</span></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></div></span></div></div></div><hr class="use-chat-gpt-ai--MuiDivider-root use-chat-gpt-ai--MuiDivider-fullWidth use-chat-gpt-ai-context-menu-39bbo6"><li class="use-chat-gpt-ai--MuiListItem-root use-chat-gpt-ai--MuiListItem-gutters use-chat-gpt-ai--MuiListItem-padding use-chat-gpt-ai-context-menu-1chkqss"><div class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai--MuiListItemButton-root use-chat-gpt-ai--MuiListItemButton-gutters use-chat-gpt-ai-context-menu-1pkh8h9" tabindex="0" role="button"><div class="use-chat-gpt-ai--MuiListItemText-root use-chat-gpt-ai-context-menu-1tsvksn"><p class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai--MuiTypography-noWrap use-chat-gpt-ai-context-menu-1ry3vq9">Μπορείτε να το ενεργοποιήσετε ξανά στις <span class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai-context-menu-15c4tlz">Ρυθμίσεις</span></p></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-context-menu-w0pj6f"></span></div></li></div></div></button></div></div></div></div></div><div id=":r3:" data-floating-ui-portal=""><div id="USE_CHAT_GPT_AI_ROOT_Floating_Reference_Element" data-testid="maxai--floating-context-menu-reference-element" data-disabled-button-clicked="true" aria-hidden="true" tabindex="-1" data-floating-ui-focusable="" style="position: fixed; z-index: -1; opacity: 0; visibility: hidden; top: 8px; left: 8px; width: 736px; height: auto; max-height: 620px;"><div class="RootMenu use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-170bhbu" aria-expanded="false" aria-haspopup="menu" id=":re:" style="height: auto; max-height: 620px;"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-vsc00s"></div><div class="use-chat-gpt-ai--MuiCollapse-root use-chat-gpt-ai--MuiCollapse-vertical use-chat-gpt-ai--MuiCollapse-hidden use-chat-gpt-ai-context-menu-a0y2e3" style="min-height: 0px; height: 0px; transition-duration: 300ms;"><div class="use-chat-gpt-ai--MuiCollapse-wrapper use-chat-gpt-ai--MuiCollapse-vertical use-chat-gpt-ai-context-menu-hboir5"><div class="use-chat-gpt-ai--MuiCollapse-wrapperInner use-chat-gpt-ai--MuiCollapse-vertical use-chat-gpt-ai-context-menu-8atqhb"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-110zff5"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-1p8uq3h" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SubdirectoryArrowRightIcon"><path d="m19 15-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9z"></path></svg><p class="use-chat-gpt-ai--MuiTypography-root use-chat-gpt-ai--MuiTypography-body1 use-chat-gpt-ai-context-menu-6en1db"></p></div></div></div></div><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-1ef6bxi"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-769jza"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-1psoerj"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-1m7dygd" style="height: 24px;"><div class="chat-box__input-skeleton use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-0"><span class="use-chat-gpt-ai--MuiSkeleton-root use-chat-gpt-ai--MuiSkeleton-text use-chat-gpt-ai--MuiSkeleton-pulse use-chat-gpt-ai-context-menu-1i0vnjy" style="height: 24px;"></span></div><div class="chat-box__input—prefix use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-context-menu-8atqhb"></div><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-b7isak"><div class="use-chat-gpt-ai--MuiStack-root max-ai-user-input__expand use-chat-gpt-ai-context-menu-1a6k5in"></div><textarea id="USE_CHAT_GPT_AI_ROOT_Floating_Input" placeholder="" rows="1" data-min-line="1" style="height: 24px;"></textarea></div><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-context-menu-16s5sa0"></div></div></div><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-contained use-chat-gpt-ai--MuiButton-containedPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-containedSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation Mui-disabled use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-contained use-chat-gpt-ai--MuiButton-containedPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-containedSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai-context-menu-goyz2k" tabindex="-1" type="button" disabled="" data-testid="sidebar_actions__send_btn"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-context-menu-vh04is" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SendIcon"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg></button></div></div></div></div></div><div id=":rf:" data-floating-ui-portal=""></div></div><style><style data-emotion="use-chat-gpt-ai-context-menu" data-s=""></style></style><link rel="stylesheet" href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/content_style.css"></template></use-chat-gpt-ai-content-menu><use-chat-gpt-ai id="maxai-global-popup-container" translate="no"><template shadowrootmode="open"><div></div><style></style><link rel="stylesheet" href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/content_style.css"></template></use-chat-gpt-ai><max-ai-minimum-app id="USE_CHAT_GPT_AI_ROOT_Minimize_Container" data-version="8.37.4"><template shadowrootmode="open"><style><style data-emotion="use-chat-gpt-ai-emotion-cache" data-s=""></style></style><div><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-emotion-cache-1p352da"><div class="react-draggable use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-emotion-cache-t1tl5f" data-testid="quick-access-maxai-mini-button-main" style="transform: translate(0px, 751px);"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-1ioy153"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-1lb1sp0"><div class="use-chat-gpt-ai--MuiBox-root use-chat-gpt-ai-emotion-cache-eh29y" type="quick-access"><div class="" style="position: absolute; top: 0px; right: 0px; width: var(--expanded-width); height: 100%; pointer-events: none; margin-right: calc(-1 * var(--middle-button-width) - 2px);"></div><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-1blloef"><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai-emotion-cache-1a9bjum" tabindex="0" type="button" data-testid="maxai__quick_access__open_sidebar_button"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-hcd08f" data-testid="quick-access-maxai-mini-button"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-1w4qcg9"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-emotion-cache-15mjlnh" focusable="false" aria-hidden="true" viewBox="0 0 33 32" width="33" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.3112 11.493L24.5228 7.55842L20.5882 5.76996L24.5228 3.98149L26.3112 0.046875L28.0997 3.98149L32.0343 5.76996L28.0997 7.55842L26.3112 11.493ZM26.3112 31.5238L24.5228 27.5892L20.5882 25.8007L24.5228 24.0123L26.3112 20.0777L28.0997 24.0123L32.0343 25.8007L28.0997 27.5892L26.3112 31.5238ZM12.0035 27.2315L8.42661 19.3623L0.557373 15.7854L8.42661 12.2084L12.0035 4.33919L15.5805 12.2084L23.4497 15.7854L15.5805 19.3623L12.0035 27.2315Z" fill="currentColor"></path></svg></div></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-emotion-cache-w0pj6f"></span></button><button class="use-chat-gpt-ai--MuiButtonBase-root use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai--MuiButton-root use-chat-gpt-ai--MuiButton-text use-chat-gpt-ai--MuiButton-textPrimary use-chat-gpt-ai--MuiButton-sizeMedium use-chat-gpt-ai--MuiButton-textSizeMedium use-chat-gpt-ai--MuiButton-colorPrimary use-chat-gpt-ai--MuiButton-disableElevation use-chat-gpt-ai-emotion-cache-1kszovk" tabindex="0" type="button" data-testid="maxai__quick_access__immersive_chat_button"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-q7hqwq" data-testid="quick-access-maxai-immersive-chat-button"><svg class="use-chat-gpt-ai--MuiSvgIcon-root use-chat-gpt-ai--MuiSvgIcon-fontSizeMedium use-chat-gpt-ai-emotion-cache-w17z31" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FullscreenOutlinedIcon"><path d="M7 14H5v5h5v-2H7zm-2-4h2V7h3V5H5zm12 7h-3v2h5v-5h-2zM14 5v2h3v3h2V5z"></path></svg></div><span class="use-chat-gpt-ai--MuiTouchRipple-root use-chat-gpt-ai-emotion-cache-w0pj6f"></span></button></div></div><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-1ro3zdf"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-wcm9g0"></div></div><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-x8w6jy"><div class="use-chat-gpt-ai--MuiStack-root use-chat-gpt-ai-emotion-cache-vgdyoe"></div></div></div></div></div></div></div></template></max-ai-minimum-app><div id="MAXAI_SNACKBAR_CONTAINER" style="z-index: 2147483647; color: rgb(255, 255, 255); position: absolute;"><span></span></div></body><div id="aiFabShadowRoot" data-fab-type="react" style="opacity: 1;"><template shadowrootmode="open"><div id="fab-react-root"><div class="fab-root" data-theme="light"><div class="acrobat-button-container " style="bottom: 36px;"><div class="acrobat-button " role="button" aria-label="Get summaries and key insights using AI Assistant"><button class="close-btn  "><svg class="close-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_8552_7892" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14" style="mask-type: alpha;"><path d="M7.82482 7.00034L10.6374 4.18778C10.7893 4.03592 10.7893 3.78969 10.6374 3.63783L10.3625 3.36292C10.2106 3.21106 9.96446 3.21106 9.81255 3.36292L6.99995 6.17548L4.18734 3.36292C4.03543 3.21106 3.78933 3.21106 3.63743 3.36292L3.36247 3.63783C3.21056 3.78969 3.21056 4.03592 3.36247 4.18778L6.17507 7.00034L3.36247 9.81295C3.21056 9.96481 3.21056 10.2111 3.36247 10.3629L3.63743 10.6378C3.78933 10.7897 4.03543 10.7897 4.18734 10.6378L6.99995 7.82526L9.81255 10.6378C9.96446 10.7897 10.2106 10.7897 10.3625 10.6378L10.6374 10.3629C10.7893 10.2111 10.7893 9.96481 10.6374 9.81295L7.82482 7.00034Z" fill="#222222"></path></mask><g mask="url(#mask0_8552_7892)"><rect width="14" height="14"></rect></g></svg><svg class="burger-icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_12188_28876" maskUnits="userSpaceOnUse" x="3" y="3" width="15" height="14" style="mask-type: alpha;"><path d="M15.1285 12.8008H6.37852C6.08867 12.8008 5.85352 13.0359 5.85352 13.3258C5.85352 13.6156 6.08867 13.8508 6.37852 13.8508H15.1285C15.4184 13.8508 15.6535 13.6156 15.6535 13.3258C15.6535 13.0359 15.4184 12.8008 15.1285 12.8008Z" fill="#292929"></path><path d="M6.37852 6.85078H15.1285C15.4184 6.85078 15.6535 6.61562 15.6535 6.32578C15.6535 6.03594 15.4184 5.80078 15.1285 5.80078H6.37852C6.08867 5.80078 5.85352 6.03594 5.85352 6.32578C5.85352 6.61562 6.08867 6.85078 6.37852 6.85078Z" fill="#292929"></path><path d="M15.1285 9.30078H6.37852C6.08867 9.30078 5.85352 9.53594 5.85352 9.82578C5.85352 10.1156 6.08867 10.3508 6.37852 10.3508H15.1285C15.4184 10.3508 15.6535 10.1156 15.6535 9.82578C15.6535 9.53594 15.4184 9.30078 15.1285 9.30078Z" fill="#292929"></path></mask><g mask="url(#mask0_12188_28876)"><rect x="3.75391" y="3" width="14" height="14" fill="#464646"></rect></g></svg></button><div class="icon-container" role="button" tabindex="0" aria-label="Open AI Assistant"><svg id="ImportedIcons" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" class="fab-svg-icon"><path d="m6.21661,16.39534c-1.35034,2.23499-2.67933,3.64758-3.45616,3.64758-.12795.00539-.25276-.04056-.34667-.12762-.14818-.12483-.21629-.32065-.17758-.5105.14764-.80079,1.68628-1.95576,3.98041-3.00946Zm6.49075-3.19656c-.57993.12528-1.1792.27056-1.78689.43544-.4366.11893-.87951.24862-1.32255.38729.23541-.4949.4515-.98554.6398-1.452.24831-.6159.48156-1.232.69564-1.83456.18831.30354.38304.59839.58195.88207.39375.56092.81787,1.09736,1.19205,1.58176Zm-2.99822-10.63684c.08814-.18001.26644-.29855.46653-.31016.51149,0,.62276.63358.62276,1.1638-.06787,1.25011-.29293,2.48669-.66988,3.68055-.85816-2.33642-.73831-3.97319-.41942-4.53419h.00001Zm9.60883,12.20974c-.13359.4402-.56725.71808-1.023.6555-.15594-.00061-.3112-.02054-.46224-.05933-1.07834-.28263-2.07953-.80363-2.92976-1.5246.71719-.11267,1.44198-.17001,2.16797-.17149.48402-.00813.96771.03017,1.44442.11438.43447.09244.92449.33873.80261.98554Zm1.45515-1.0537c-1.01837-.83309-2.33117-1.21735-3.63802-1.06487-.98482.00983-1.96732.09739-2.93836.26187-.62354-.62512-1.19003-1.30467-1.69272-2.03054-.38314-.54455-.73672-1.10931-1.05923-1.69182.54287-1.57384.85986-3.2167.94151-4.87953,0-1.49369-.57564-3.09087-2.19132-3.09087-.56296.01952-1.07528.33036-1.35261.82066-.68906,1.2165-.41298,3.72002.68705,6.26756-.38306,1.17041-.80046,2.31007-1.31196,3.57265-.43687,1.08123-.93191,2.13803-1.48293,3.16579-1.64775.68213-5.15115,2.33642-5.48494,4.16456-.10306.53569.0783,1.08658.47942,1.45629.39145.35044.90217.53779,1.42737.5236,2.10998,0,4.21366-3.003,5.63044-5.58789.80461-.2816,1.62641-.53671,2.44391-.759.8967-.24407,1.76345-.44427,2.58082-.594,1.39014,1.39224,3.25004,2.21523,5.21531,2.30773,1.36751,0,1.87887-.60942,2.06516-1.122.20733-.5893.08589-1.24438-.3189-1.72019Z" fill="var(--iconRed, #d31510)" fill-rule="evenodd"></path></svg></div></div><div class="tooltip-text fab-home-tooltip "><svg class="fab-home-tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="m6.21661,16.39534c-1.35034,2.23499-2.67933,3.64758-3.45616,3.64758-.12795.00539-.25276-.04056-.34667-.12762-.14818-.12483-.21629-.32065-.17758-.5105.14764-.80079,1.68628-1.95576,3.98041-3.00946Zm6.49075-3.19656c-.57993.12528-1.1792.27056-1.78689.43544-.4366.11893-.87951.24862-1.32255.38729.23541-.4949.4515-.98554.6398-1.452.24831-.6159.48156-1.232.69564-1.83456.18831.30354.38304.59839.58195.88207.39375.56092.81787,1.09736,1.19205,1.58176Zm-2.99822-10.63684c.08814-.18001.26644-.29855.46653-.31016.51149,0,.62276.63358.62276,1.1638-.06787,1.25011-.29293,2.48669-.66988,3.68055-.85816-2.33642-.73831-3.97319-.41942-4.53419h.00001Zm9.60883,12.20974c-.13359.4402-.56725.71808-1.023.6555-.15594-.00061-.3112-.02054-.46224-.05933-1.07834-.28263-2.07953-.80363-2.92976-1.5246.71719-.11267,1.44198-.17001,2.16797-.17149.48402-.00813.96771.03017,1.44442.11438.43447.09244.92449.33873.80261.98554Zm1.45515-1.0537c-1.01837-.83309-2.33117-1.21735-3.63802-1.06487-.98482.00983-1.96732.09739-2.93836.26187-.62354-.62512-1.19003-1.30467-1.69272-2.03054-.38314-.54455-.73672-1.10931-1.05923-1.69182.54287-1.57384.85986-3.2167.94151-4.87953,0-1.49369-.57564-3.09087-2.19132-3.09087-.56296.01952-1.07528.33036-1.35261.82066-.68906,1.2165-.41298,3.72002.68705,6.26756-.38306,1.17041-.80046,2.31007-1.31196,3.57265-.43687,1.08123-.93191,2.13803-1.48293,3.16579-1.64775.68213-5.15115,2.33642-5.48494,4.16456-.10306.53569.0783,1.08658.47942,1.45629.39145.35044.90217.53779,1.42737.5236,2.10998,0,4.21366-3.003,5.63044-5.58789.80461-.2816,1.62641-.53671,2.44391-.759.8967-.24407,1.76345-.44427,2.58082-.594,1.39014,1.39224,3.25004,2.21523,5.21531,2.30773,1.36751,0,1.87887-.60942,2.06516-1.122.20733-.5893.08589-1.24438-.3189-1.72019Z" fill="#D6373F" fill-rule="evenodd"></path></svg><span class="tooltip-text-content">Check out Acrobat's new home in your browser</span></div><div class="draggable-handle "><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.60039 13.0699C5.26313 13.0699 5.80039 12.5327 5.80039 11.8699C5.80039 11.2072 5.26313 10.6699 4.60039 10.6699C3.93765 10.6699 3.40039 11.2072 3.40039 11.8699C3.40039 12.5327 3.93765 13.0699 4.60039 13.0699Z" fill="#292929"></path><path d="M4.60039 8.27109C5.26313 8.27109 5.80039 7.73384 5.80039 7.07109C5.80039 6.40835 5.26313 5.87109 4.60039 5.87109C3.93765 5.87109 3.40039 6.40835 3.40039 7.07109C3.40039 7.73384 3.93765 8.27109 4.60039 8.27109Z" fill="#292929"></path><path d="M4.60039 3.47031C5.26313 3.47031 5.80039 2.93305 5.80039 2.27031C5.80039 1.60757 5.26313 1.07031 4.60039 1.07031C3.93765 1.07031 3.40039 1.60757 3.40039 2.27031C3.40039 2.93305 3.93765 3.47031 4.60039 3.47031Z" fill="#292929"></path><path d="M9.4002 13.0699C10.0629 13.0699 10.6002 12.5327 10.6002 11.8699C10.6002 11.2072 10.0629 10.6699 9.4002 10.6699C8.73745 10.6699 8.2002 11.2072 8.2002 11.8699C8.2002 12.5327 8.73745 13.0699 9.4002 13.0699Z" fill="#292929"></path><path d="M9.4002 8.27109C10.0629 8.27109 10.6002 7.73384 10.6002 7.07109C10.6002 6.40835 10.0629 5.87109 9.4002 5.87109C8.73745 5.87109 8.2002 6.40835 8.2002 7.07109C8.2002 7.73384 8.73745 8.27109 9.4002 8.27109Z" fill="#292929"></path><path d="M9.4002 3.47031C10.0629 3.47031 10.6002 2.93305 10.6002 2.27031C10.6002 1.60757 10.0629 1.07031 9.4002 1.07031C8.73745 1.07031 8.2002 1.60757 8.2002 2.27031C8.2002 2.93305 8.73745 3.47031 9.4002 3.47031Z" fill="#292929"></path></svg></div></div></div></div><style>
+    .acrobat-button-container {
+        position: fixed;
+        right: 0;
+        bottom: 36px;
+        z-index: 2147483646;
+        visibility: visible !important;
+        pointer-events: all;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    @media print {
+        .acrobat-button-container {
+            display: none !important;
+        }
+    }
+
+    .acrobat-button {
+        position: relative;
+        background: white;
+        display: flex;
+        align-items: center;
+        pointer-events: all;
+        touch-action: none;
+        box-shadow: 0px 2px 8px 0px #00000029;
+        height: 34px;
+        width: 34px;
+        border: 1px solid transparent;
+        background-clip: padding-box, border-box;
+        background-origin: border-box;
+        background-image: linear-gradient(white, white),
+                        linear-gradient(95.85deg, #D73220 0%, #D92361 33%, #7155FA 100%);
+        border-radius: 18px;
+        justify-content: right;
+        margin-right: var(--fab-margin-right, 28px);
+        overflow: hidden;
+    }
+
+    .acrobat-button-container-transparent {
+        opacity: 0.4 !important;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .acrobat-button-container-transparent:hover,
+    .acrobat-button-container-transparent:focus,
+    .acrobat-button-container-transparent:active {
+        opacity: 1;
+    }
+
+    .acrobat-button > svg {
+        flex-shrink: 0;
+        margin: 4px 5px 5px 5px;
+        width: 22px;
+        height: 22px;
+        pointer-events: none;
+        fill: #b40000;
+    }
+    .acrobat-button:has(.close-btn.open),
+    .expand-acrobat-button {
+        width: 64px;
+    }
+
+    .disabled {
+        background: #B1B1B1;
+    }
+
+    .tooltip-text {
+        width: 160px;
+        visibility: hidden;
+        opacity: 0;
+        background-color: #FFFFFF;
+        color: #292929;
+        border-radius: 7px;
+        padding: 4px 1px 5px 9px;
+        position: absolute;
+        z-index: 1;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 10px;
+        transition: opacity 0.3s, visibility 0s linear 2s;
+        font-size: 12px;
+        line-height: 15px;
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.12));
+    }
+
+    .tooltip-text::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 100%;
+       transform: translateY(-50%);
+       border-width: 6px;
+       border-style: solid;
+       border-color: transparent transparent transparent #fff;
+    }
+
+    .show-tooltip {
+        visibility: visible;
+        opacity: 1;
+        line-height: 1.5;
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        transition: opacity 0.3s;
+        transition-delay: 500ms;
+    }
+
+    .close-btn {
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-btn svg {
+        fill: #464646;
+    }
+
+    .close-btn.showCloseButton {
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        padding: 2px;
+    }
+
+    .fab-view-settings-dialog {
+        display: none;
+        position: absolute;
+        bottom: 40px;
+        z-index: 1;
+    }
+
+    .close-btn:hover {
+        background: #E6E6E6;
+        border-radius: 50%; /* Keep original circular hover */
+        cursor: pointer;
+    }
+
+    .fab-view-settings-dialog.showDialog {
+        display: block;
+    }
+    .close-btn .burger-icon {
+        display: inline;
+        margin-bottom: 2px;
+    }
+    .close-btn .close-icon {
+        display: none;
+    }
+    .close-btn.open .burger-icon {
+        display: none;
+    }
+    .close-btn.open .close-icon {
+        display: inline;
+    }
+    .tooltip-text .tooltip-text-content {
+        font-weight: bold;
+    }
+    .tooltip-text .tooltip-sub-text-text {
+        font-style: italic;
+        font-size: 11px;
+    }
+
+    /* Home tooltip FTE — icon + layout overrides */
+    .fab-home-tooltip {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 183px;
+        border-radius: 8px;
+        padding: 6px 8px 8px 12px;
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.08), 0px 1px 2px rgba(0,0,0,0.04), 0px 0px 1px rgba(0,0,0,0.08), 0px 3px 5px rgba(116,23,208,0.07);
+    }
+    .fab-home-tooltip .tooltip-text-content {
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #292929;
+        white-space: normal;
+        word-wrap: break-word;
+        width: 145px;
+    }
+    .fab-home-tooltip-icon {
+        flex-shrink: 0;
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Icon container styles - replaces iframe */
+    .icon-container {
+        width: 33px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+        pointer-events: all;
+        flex-shrink: 0;
+        background: transparent;
+        border: none;
+    }
+
+    .icon-container:active {
+        cursor: grabbing;
+    }
+
+    .fab-svg-icon {
+        width: 22px;
+        height: 22px;
+        padding: 5px 5px 5px 6px;
+        pointer-events: none;
+        fill: #b40000;
+    }
+
+    .draggable-handle {
+        display: none;
+        position: absolute;
+        right: var(--drag-handle-right, 12px);
+        cursor: grab;
+    }
+    .draggable-handle-visible {
+        display: flex;
+    }
+
+    /* Font face declarations - for proper font loading in Shadow DOM */
+    @font-face {
+        font-family: 'adobe-clean';
+        font-weight: 400;
+        src: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/css/fonts/AdobeClean-Regular.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'adobe-clean';
+        font-weight: 700;
+        src: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/css/fonts/AdobeClean-Bold.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'AdobeClean-Regular';
+        src: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/css/fonts/AdobeClean-Regular.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'AdobeClean-Bold';
+        src: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/css/fonts/AdobeClean-Bold.otf') format('opentype');
+    }
+    body {
+        font-family: 'AdobeClean-Regular', adobe-clean, "Adobe Clean", sans-serif;
+    }
+
+    .dialog-container {
+        width: 166px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        border: 1px solid #B1B1B1;
+        box-shadow: 0px 1px 4px 0px #00000026;
+        z-index: 1000;
+        padding: 4px;
+        position: relative;
+        margin: 4px 0px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu .menu_item {
+        cursor: pointer;
+        font-family: 'AdobeClean-Regular', adobe-clean, "Adobe Clean", sans-serif;
+        align-content: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.2px;
+        text-align: left;
+        color: #222222;
+        padding: 0px 12px;
+        height: 32px;
+        width: 140px;
+    }
+
+    .menu .menu_item:hover {
+        background-color: #eaeaea;
+    }
+
+    .preferences {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18.2px;
+        text-align: left;
+        color: #464646;
+    }
+
+    .divider {
+        border-top: 1px solid #E6E6E6;
+    }
+
+    /* React-specific wrappers - minimal */
+    .fab-root {
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        /* FAB is UI chrome, not page content — exclude from host page select-all/copy */
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    button.close-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10; /* Ensure clickable above all other elements */
+        pointer-events: auto;
+    }
+
+    /* FAB Action Pills - From Figma Design */
+    .fab-pills-container {
+        position: absolute;
+        bottom: 42px; /* FAB height (34px) + gap (8px) = 42px */
+        right: var(--fab-margin-right, 28px);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+        width: 142px;
+        z-index: 1;
+    }
+
+    .fab-pills-container.pills-below {
+        bottom: auto;
+        top: 42px; /* Same gap when positioned below */
+    }
+
+    /* Nudge variant (challenger) — all pills take dynamic width instead of fixed 142px */
+    .fab-pills-container.nudge-variant .fab-pill-button {
+        width: auto;
+    }
+
+    .fab-pills-container.nudge-variant .fab-pill-label {
+        white-space: nowrap;
+    }
+
+    /* Extend hover area using ::after pseudo-element - doesn't affect visual layout */
+    .fab-pills-container::after {
+        content: '';
+        position: absolute;
+        top: 100%; /* Start right after the pills content */
+        left: 0;
+        right: 0;
+        height: 8px;
+        background: transparent;
+        pointer-events: auto;
+    }
+
+    .fab-pills-container.pills-below::after {
+        top: auto;
+        bottom: 100%; /* Start right before the pills when positioned below */
+    }
+
+    /* FTE Header - First Time Experience (56px with close button) */
+    .fab-fte-header {
+        position: relative;
+        width: 142px;
+        min-height: 56px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .fab-fte-background {
+        position: absolute;
+        inset: 0;
+        background: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/images/fab-header-background-light.svg') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .fab-fte-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        color: #222222;
+        padding: 0;
+    }
+
+    .fab-fte-close:hover {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+    }
+
+    .fab-fte-close svg {
+        width: 8px;
+        height: 8px;
+    }
+
+    .fab-fte-text {
+        position: relative;
+        width: 102px;
+        font-family: 'AdobeClean-Bold', adobe-clean, sans-serif;
+        font-weight: 400; /* Use Bold font file directly, not synthetic bold */
+        font-size: 12px;
+        line-height: 16px;
+        color: #222222; /* Figma spec color */
+        z-index: 1;
+        white-space: normal;
+        word-wrap: break-word;
+        margin-left: 16px;
+        margin-right: auto;
+        box-sizing: border-box;
+        -webkit-font-smoothing: subpixel-antialiased; /* Better font rendering */
+        -moz-osx-font-smoothing: auto;
+    }
+
+    /* Hover Header - Normal state (24px without close button) */
+    .fab-hover-header {
+        position: relative;
+        width: 142px;
+        min-height: 24px;
+        background: #FFFFFF; /* White background to show the colorful SVG and text */
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .fab-hover-background {
+        position: absolute;
+        inset: 0;
+        background: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/images/fab-header-background-light.svg') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .fab-hover-text {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'AdobeClean-Bold', adobe-clean, sans-serif;
+        font-weight: 400; /* Use Bold font file directly, not synthetic bold */
+        font-size: 12px;
+        line-height: 15px;
+        color: #222222; /* Figma spec color */
+        z-index: 1;
+        white-space: normal;
+        padding: 4px 9px;
+        box-sizing: border-box;
+        -webkit-font-smoothing: subpixel-antialiased; /* Better font rendering */
+        -moz-osx-font-smoothing: auto;
+    }
+
+    /* Individual Pill Buttons */
+    .fab-pill-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        width: 142px;
+        min-height: 24px; /* Min height, allows growth with content */
+        background: #FFFFFF;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        padding: 0;
+        transition: background 0.2s ease;
+        overflow: visible;
+    }
+
+   .fab-pill-contextual-ring-wrapper {
+        position: relative;
+        display: inline-block;
+        padding: 1px;
+        border-radius: 13px;
+        overflow: hidden;
+    }
+
+    .fab-pill-contextual-ring-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+        background: conic-gradient(from 180deg at 50% 50%,
+            #7155FA 0deg,
+            #7155FA 54deg,
+            #D92361 108deg,
+            #D73220 180deg,
+            #FFFFFF 180deg,
+            #FFFFFF 360deg);
+        animation: fab-contextual-pill-ring-rotate 3s linear infinite;
+    }
+
+    @keyframes fab-contextual-pill-ring-rotate {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .fab-pill-button:hover {
+        background: #D5D5D5;
+    }
+
+    .fab-pill-button:hover .fab-pill-label,
+    .fab-pill-button:hover .fab-pill-icon {
+        color: #000000; /* Hover state color from Figma Alias/content/neutral/hover */
+    }
+
+    .fab-pill-button:active {
+        background: #F4F4F4;
+    }
+
+    .fab-pill-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 7px 4px 10px; /* Exact Figma specs: top right bottom left */
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+
+    .fab-pill-icon img {
+        width: 16px;
+        height: 16px;
+        display: block;
+        flex-shrink: 0;
+        /* SVG icons with currentColor fill will inherit color from parent */
+        filter: brightness(0) saturate(100%) invert(13%) sepia(0%) saturate(0%) hue-rotate(196deg) brightness(97%) contrast(97%); /* #222222 */
+    }
+
+    .fab-pill-button:hover .fab-pill-icon img {
+        filter: brightness(0) saturate(100%); /* #000000 on hover */
+    }
+
+    .fab-pill-label {
+        display: flex;
+        align-items: center;
+        font-family: 'AdobeClean-Bold', adobe-clean, sans-serif;
+        font-weight: 400; /* Use Bold font file directly, not synthetic bold */
+        font-size: 12px;
+        line-height: 15px; /* 1.252 * 12px = 15.024px */
+        color: #222222; /* Default text color from Figma Alias/content/neutral/default */
+        padding: 4px 9px 5px 0; /* Reduced right padding to prevent wrapping */
+        text-align: left;
+        white-space: normal; /* Allow text wrapping for multi-line content */
+        box-sizing: border-box;
+        flex: 1;
+        overflow: visible;
+        -webkit-font-smoothing: subpixel-antialiased; /* Better font rendering */
+        -moz-osx-font-smoothing: auto;
+    }
+
+    /* Dark theme — driven by detectPageTheme() in page-theme-utils.js (gated by isSidePanelDarkModeEnabled) */
+    .fab-root[data-theme="dark"] .acrobat-button {
+        background: #1d1d1d;
+        /* The shorthand above resets clip/origin, which the gradient border layer depends on */
+        background-clip: padding-box, border-box;
+        background-origin: border-box;
+        background-image: linear-gradient(#1d1d1d, #1d1d1d),
+                        linear-gradient(95.85deg, #D73220 0%, #D92361 33%, #7155FA 100%);
+    }
+    .fab-root[data-theme="dark"] .burger-icon rect,
+    .fab-root[data-theme="dark"] .close-icon rect,
+    .fab-root[data-theme="dark"] .draggable-handle path {
+        fill: #d1d1d1;
+    }
+    .fab-root[data-theme="dark"] .close-btn:hover {
+        background: #3a3a3a;
+    }
+    .fab-root[data-theme="dark"] .disabled {
+        background: #555555;
+    }
+
+    .fab-root[data-theme="dark"] .tooltip-text {
+        background-color: #2c2c2c;
+        color: #ebebeb;
+    }
+    .fab-root[data-theme="dark"] .tooltip-text::after {
+        border-color: transparent transparent transparent #2c2c2c;
+    }
+    .fab-root[data-theme="dark"] .fab-home-tooltip .tooltip-text-content {
+        color: #ebebeb;
+    }
+
+    .fab-root[data-theme="dark"] .dialog-container {
+        background-color: #323232;
+        border-color: #4a4a4a;
+    }
+    .fab-root[data-theme="dark"] .menu .menu_item {
+        color: #ebebeb;
+    }
+    .fab-root[data-theme="dark"] .menu .menu_item:hover {
+        background-color: #3a3a3a;
+    }
+    .fab-root[data-theme="dark"] .preferences {
+        color: #adadad;
+    }
+    .fab-root[data-theme="dark"] .divider {
+        border-top-color: #4a4a4a;
+    }
+
+    .fab-root[data-theme="dark"] .fab-pill-button {
+        background: #1d1d1d;
+    }
+    /* Contextual pill ring: the non-gradient half is white in light mode; use a subtle grey outline in dark */
+    .fab-root[data-theme="dark"] .fab-pill-contextual-ring-wrapper::before {
+        background: conic-gradient(from 180deg at 50% 50%,
+            #7155FA 0deg,
+            #7155FA 54deg,
+            #D92361 108deg,
+            #D73220 180deg,
+            #2c2c2c 180deg,
+            #2c2c2c 360deg);
+    }
+    .fab-root[data-theme="dark"] .fab-pill-button:hover {
+        background: #2c2c2c;
+    }
+    .fab-root[data-theme="dark"] .fab-pill-button:active {
+        background: #111111;
+    }
+    .fab-root[data-theme="dark"] .fab-pill-label {
+        color: #ebebeb;
+    }
+    .fab-root[data-theme="dark"] .fab-pill-button:hover .fab-pill-label,
+    .fab-root[data-theme="dark"] .fab-pill-button:hover .fab-pill-icon {
+        color: #ffffff;
+    }
+    .fab-root[data-theme="dark"] .fab-pill-icon img {
+        filter: brightness(0) saturate(100%) invert(92%);
+    }
+    .fab-root[data-theme="dark"] .fab-pill-button:hover .fab-pill-icon img {
+        filter: brightness(0) saturate(100%) invert(100%);
+    }
+
+    .fab-root[data-theme="dark"] .fab-fte-header,
+    .fab-root[data-theme="dark"] .fab-hover-header {
+        background: #1d1d1d;
+    }
+    .fab-root[data-theme="dark"] .fab-fte-background,
+    .fab-root[data-theme="dark"] .fab-hover-background {
+        background-image: url('chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/browser/images/fab-header-background-dark.svg');
+    }
+    .fab-root[data-theme="dark"] .fab-fte-text,
+    .fab-root[data-theme="dark"] .fab-hover-text,
+    .fab-root[data-theme="dark"] .fab-fte-close {
+        color: #ebebeb;
+    }
+</style></template></div></html>
